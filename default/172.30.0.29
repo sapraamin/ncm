@@ -1,0 +1,692 @@
+! Cisco IOS Software, C2960S Software (C2960S-UNIVERSALK9-M), Version 15.2(2a)E1, RELEASE SOFTWARE (fc1)
+! 
+! Image: Software: C2960S-UNIVERSALK9-M, 15.2(2a)E1, RELEASE SOFTWARE (fc1)
+! Image: Compiled: Wed 10-Dec-14 03:54 by prod_rel_team
+! Image: flash:/c2960s-universalk9-mz.152-2a.E1.bin
+! Chassis type: WS-C2960S-48FPS-L
+! Memory: main 131072K
+! Processor ID: FOC1503X4S8
+! CPU: PowerPC
+! 
+! VTP: VTP Version capable             : 1 to 3
+! VTP: VTP version running             : 1
+! VTP: VTP Domain Name                 : 
+! VTP: VTP Pruning Mode                : Disabled
+! VTP: VTP Traps Generation            : Disabled
+! VTP: Device ID                       : 44e4.d937.0a80
+! VTP: Local updater ID is 172.30.0.29 on interface Vl2 (lowest numbered VLAN interface found)
+! VTP: Feature VLAN:
+! VTP: --------------
+! VTP: VTP Operating Mode                : Server
+! VTP: Maximum VLANs supported locally   : 1005
+! VTP: Number of existing VLANs          : 12
+! VTP: Configuration Revision            : 7
+! VTP: MD5 digest                        : 0xEF 0xD7 0xE2 0x29 0x4E 0x88 0x2E 0x82 
+! VTP:                                     0x38 0x9B 0x79 0xB0 0x62 0xC9 0x92 0xEF 
+! 
+! NAME: "1", DESCR: "WS-C2960S-48FPS-L"
+! PID: WS-C2960S-48FPS-L , VID: V02  , SN: FOC1503X4S8
+! 
+! NAME: "GigabitEthernet1/0/51", DESCR: "1000BaseLX SFP"
+! PID: GLC-LH-SMD          , VID: V04  , SN: EC3LX40533      
+! 
+! NAME: "GigabitEthernet1/0/52", DESCR: "1000BaseLX SFP"
+! PID: GLC-LH-SMD          , VID: V04  , SN: EC3LX40538      
+! 
+! 
+!
+! Last configuration change at 16:41:58 IRST Thu Oct 31 2024 by sapramin
+! NVRAM config last updated at 16:42:00 IRST Thu Oct 31 2024 by sapramin
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec localtime show-timezone year
+service timestamps log datetime msec localtime show-timezone year
+service password-encryption
+service linenumber
+service sequence-numbers
+!
+hostname AHD-BF1-R1-SWT-01
+!
+boot-start-marker
+boot-end-marker
+!
+logging buffered 10000
+!
+username sapramin privilege 15 secret 5 $1$KkWI$yajG6jY4achU1rlaD6pOy1
+username oxidized privilege 15 secret 5 $1$fVf8$4BNfDD074PZmlioGcrMIJ0
+no aaa new-model
+clock timezone IRST 3 30
+switch 1 provision ws-c2960s-48fps-l
+!
+!
+no ip domain-lookup
+ip domain-name sapramin.com
+ip name-server 172.31.0.53
+login on-failure log
+login on-success log
+!
+!
+!
+!
+!
+authentication mac-move permit
+!
+!
+crypto pki trustpoint TP-self-signed-3644263040
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3644263040
+ revocation-check none
+ rsakeypair TP-self-signed-3644263040
+!
+!
+crypto pki certificate chain TP-self-signed-3644263040
+ certificate self-signed 01
+  30820256 308201BF A0030201 02020101 300D0609 2A864886 F70D0101 04050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 33363434 32363330 3430301E 170D3933 30333031 30303032 
+  30345A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 36343432 
+  36333034 3030819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
+  8100B9F1 065684ED 6893DC77 4297B5FC 7D3AF356 21BA90FD BE60096A 50BDCFF0 
+  A1AC3EA6 D6E76EA9 5D580144 1DDD342C 303C7A36 FE114C60 A561DCCB C40553BC 
+  9D256E1C 764F2466 3BDC3E17 DA134A7E 66229A92 0C970232 0FF6BF81 C80D4DE2 
+  CAAA7926 D3129D80 0A0ECBB3 42C5EA59 EAA9D654 D6105A15 E321EB00 7702E892 
+  89BF0203 010001A3 7E307C30 0F060355 1D130101 FF040530 030101FF 30290603 
+  551D1104 22302082 1E414844 2D424631 2D52312D 5357542D 30312E73 61707261 
+  6D696E2E 636F6D30 1F060355 1D230418 30168014 85BF3093 CBA3D9AA D268BF09 
+  F83892CA BE0643FD 301D0603 551D0E04 16041485 BF3093CB A3D9AAD2 68BF09F8 
+  3892CABE 0643FD30 0D06092A 864886F7 0D010104 05000381 81009582 6BF7EF9B 
+  104DB3DB CA7F446E 0D78A428 4EB05663 7E31760F 2E4F71A2 01C334CA E8272100 
+  9EF1298F 9AB3047D 6AC47137 FBF15D20 52ED2FFD 345A0F0E 953171D5 04FAADB0 
+  02138A8C 7AD99F80 A9CD0143 6736A71B E8FF46DD 8CA84206 2305DE0B 30A409B8 
+  28FF1770 EAC8114C BA6CA58A 67E60969 4776E7A5 6D3DFF8D 5843
+  	quit
+memory free low-watermark processor 20000
+memory free low-watermark IO 20000
+!
+spanning-tree mode rapid-pvst
+spanning-tree portfast bpduguard default
+spanning-tree extend system-id
+!
+spanning-tree mst configuration
+ name AHD-BF1
+!
+errdisable recovery cause channel-misconfig
+port-channel load-balance src-dst-ip
+!
+!
+!
+!
+vlan internal allocation policy ascending
+!
+ip ssh time-out 60
+ip ssh logging events
+ip ssh version 2
+lldp run
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Port-channel1
+ description UPLINK AHD-AF0-R4-SWT-01/02 (bonding3)
+ switchport trunk allowed vlan 1,2,102-105,107,108
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+!
+interface Port-channel12
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+!
+interface FastEthernet0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/0/1
+ description OFFICE1_SEAT4
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/2
+ description OFFICE1_SEAT5
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/3
+ description OFFICE1_SEAT1
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/4
+ description OFFICE1_SEAT2
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/5
+ description OFFICE1_SEAT3
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/6
+ description OFFICE2_SEAT4
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/7
+ description OFFICE2_SEAT5
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/8
+ description OFFICE2_SEAT1
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/9
+ description OFFICE2_SEAT2
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/10
+ description OFFICE2_SEAT3
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/11
+ description OFFICE3_SEAT4
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/12
+ description OFFICE3_SEAT5
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/13
+ description OFFICE3_SEAT1
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/14
+ description OFFICE3_SEAT2
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/15
+ description OFFICE3_SEAT3
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/16
+ description OFFICE4_SEAT4
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/17
+ description OFFICE4_SEAT5
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/18
+ description OFFICE4_SEAT1
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/19
+ description OFFICE4_SEAT2
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/20
+ description OFFICE4_SEAT3
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/21
+ description OFFICE5_SEAT4
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/22
+ description OFFICE5_SEAT5
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/23
+ description OFFICE5_SEAT1
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/24
+ description OFFICE5_SEAT2
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/25
+ description OFFICE5_SEAT3
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/26
+ description OFFICE6_SEAT4
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/27
+ description OFFICE6_SEAT5
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/28
+ description OFFICE6_SEAT1
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/29
+ description OFFICE6_SEAT2
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/30
+ description OFFICE6_SEAT3
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/31
+ description OFFICE7_SEAT1
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/32
+ description MEETING_ROOM
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/33
+ switchport access vlan 104
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/34
+ switchport access vlan 102
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/35
+ switchport access vlan 102
+ switchport mode access
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/36
+ description AHD-BF1-RF-CAM-03 Office6
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/37
+ description AHD-BF1-RF-CAM-10 Office2
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/38
+ description AHD-BF1-RF-CAM-09 Office4
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/39
+ description AHD-BF1-RF-CAM-11 Office5
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/40
+ description AHD-BF1-RF-CAM-12 TrainingRoom
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/41
+ description AHD-BF1-RF-CAM-05 Office3
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/42
+ description AHD-BF1-RF-CAM-04 ConferenceRoom
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/43
+ description AHD-BF1-RF-CAM-01 Corridor1
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/44
+ description AHD-BF1-RF-CAM-06 Stairs
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/45
+ description AHD-BF1-RF-CAM-02 Corridor2
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/46
+ switchport access vlan 104
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/47
+ description AHD-BF1-RF-CAM-08 Office1
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/48
+ description DOWNLINK AHD-BF1-RF-WAP-01
+ switchport trunk native vlan 2
+ switchport trunk allowed vlan 2,105-108
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/49
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/50
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/51
+ description UPLINK AHD-AF0-R4-SWT-01 (bonding3 sfp-sfpplus15)
+ switchport trunk allowed vlan 1,2,102-105,107,108
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ channel-group 1 mode active
+!
+interface GigabitEthernet1/0/52
+ description UPLINK AHD-AF0-R4-SWT-02 (bonding3 sfp-sfpplus2)
+ switchport trunk allowed vlan 1,2,102-105,107,108
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ channel-group 1 mode active
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan2
+ description MGMT
+ ip address 172.30.0.29 255.255.255.0
+!
+ip default-gateway 172.30.0.1
+ip http server
+ip http secure-server
+!
+!
+ip access-list standard Trusted_SNMP
+ permit 172.16.0.16
+!
+logging source-interface Vlan2
+logging host 172.16.0.20
+!
+snmp-server community S@Pr4NMP RO Trusted_SNMP
+snmp-server location AHD BF1 [35.647435, 51.202961]
+snmp-server contact it@sapramin.com
+snmp ifmib ifindex persist
+!
+!
+line con 0
+ login local
+line vty 0 4
+ exec-timeout 50 0
+ login local
+ transport input all
+line vty 5 15
+ exec-timeout 50 0
+ login local
+ transport input all
+!
+ntp server 172.31.0.123
+mac address-table notification change
+mac address-table notification mac-move
+end
+
