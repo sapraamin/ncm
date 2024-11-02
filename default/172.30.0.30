@@ -1,0 +1,389 @@
+! Cisco IOS Software, C2960S Software (C2960S-UNIVERSALK9-M), Version 15.2(2a)E1, RELEASE SOFTWARE (fc1)
+! 
+! Image: Software: C2960S-UNIVERSALK9-M, 15.2(2a)E1, RELEASE SOFTWARE (fc1)
+! Image: Compiled: Wed 10-Dec-14 03:54 by prod_rel_team
+! Image: flash:/c2960s-universalk9-mz.152-2a.E1.bin
+! Chassis type: WS-C2960S-24PS-L
+! Memory: main 131072K
+! Processor ID: FOC1621Z4KV
+! CPU: PowerPC
+! 
+! VTP: VTP Version capable             : 1 to 3
+! VTP: VTP version running             : 1
+! VTP: VTP Domain Name                 : 
+! VTP: VTP Pruning Mode                : Disabled
+! VTP: VTP Traps Generation            : Disabled
+! VTP: Device ID                       : f47f.35a1.2b80
+! VTP: Local updater ID is 172.30.0.30 on interface Vl2 (lowest numbered VLAN interface found)
+! VTP: Feature VLAN:
+! VTP: --------------
+! VTP: VTP Operating Mode                : Server
+! VTP: Maximum VLANs supported locally   : 1005
+! VTP: Number of existing VLANs          : 8
+! VTP: Configuration Revision            : 8
+! VTP: MD5 digest                        : 0xD2 0x9E 0xC0 0xDE 0xAF 0xBA 0xEB 0x34 
+! VTP:                                     0x3B 0x82 0xC7 0x7E 0xA7 0x14 0x5D 0xD3 
+! 
+! NAME: "1", DESCR: "WS-C2960S-24PS-L"
+! PID: WS-C2960S-24PS-L  , VID: V03  , SN: FOC1621Z4KV
+! 
+! 
+!
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec localtime show-timezone year
+service timestamps log datetime msec localtime show-timezone year
+service password-encryption
+service linenumber
+service sequence-numbers
+!
+hostname AHD-AF0-R4-SWT-03
+!
+boot-start-marker
+boot-end-marker
+!
+!
+username sapramin privilege 15 secret 5 $1$KkWI$yajG6jY4achU1rlaD6pOy1
+username oxidized privilege 15 secret 5 $1$fVf8$4BNfDD074PZmlioGcrMIJ0
+no aaa new-model
+clock timezone IRST 3 30
+switch 1 provision ws-c2960s-24ps-l
+!
+!
+no ip domain-lookup
+ip domain-name sapramin.com
+ip name-server 172.31.0.53
+login on-failure log
+login on-success log
+!
+!
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-899754880
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-899754880
+ revocation-check none
+ rsakeypair TP-self-signed-899754880
+!
+!
+crypto pki certificate chain TP-self-signed-899754880
+ certificate self-signed 01
+  30820254 308201BD A0030201 02020101 300D0609 2A864886 F70D0101 04050030 
+  30312E30 2C060355 04031325 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 38393937 35343838 30301E17 0D393330 33303130 30303532 
+  315A170D 32303031 30313030 30303030 5A303031 2E302C06 03550403 1325494F 
+  532D5365 6C662D53 69676E65 642D4365 72746966 69636174 652D3839 39373534 
+  38383030 819F300D 06092A86 4886F70D 01010105 0003818D 00308189 02818100 
+  B413ED5F 14E81317 37F93DDA 35ACC83A 88174613 A2C5E0DF 6FC251E6 35235869 
+  CA8205AD 01509D25 AB24051F 8469093B F3C7444D 0FE88537 91AB915A BC36E9AF 
+  DF0D3537 7D8E24C3 9AC2E988 733F41AE 143E9A40 B72499E8 54346BCE 452B4878 
+  80A48345 C84D6370 2A2B284D 1C76E3F0 3539B650 CA4872E3 61477BDB 5414F001 
+  02030100 01A37E30 7C300F06 03551D13 0101FF04 05300301 01FF3029 0603551D 
+  11042230 20821E41 48442D41 46302D52 342D5357 542D3033 2E736170 72616D69 
+  6E2E636F 6D301F06 03551D23 04183016 80142A7B C789706B 37186571 D91A55CD 
+  EF6ACA8F D3E3301D 0603551D 0E041604 142A7BC7 89706B37 186571D9 1A55CDEF 
+  6ACA8FD3 E3300D06 092A8648 86F70D01 01040500 03818100 8F806438 9588426B 
+  0DB95A61 D9444173 687EAD81 29DA20BA A6C5DEDC 00649CE2 F4C2E31F A7A1C90A 
+  FF208037 E82E99E6 D178D30B 94484101 CA192053 45B0D5FB B5E9A929 6520AE6A 
+  0D4E77A1 A65BE47B 40634021 B7651611 8E90E23D B599B7C2 D23A9D1D 51350D62 
+  47EA40FF 47381E78 7158CF4B D3D1D6B8 38846BD5 3FBFB261
+  	quit
+memory free low-watermark processor 20000
+memory free low-watermark IO 20000
+!
+spanning-tree mode rapid-pvst
+spanning-tree portfast bpduguard default
+spanning-tree extend system-id
+errdisable recovery cause channel-misconfig
+port-channel load-balance src-dst-ip
+!
+!
+!
+!
+vlan internal allocation policy ascending
+!
+ip ssh time-out 60
+ip ssh logging events
+ip ssh version 2
+lldp run
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Port-channel1
+ description UPLINK AHD-AF0-R4-SWT-01 (bonding2)
+ switchport trunk allowed vlan 2,3,110
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+!
+interface FastEthernet0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/0/1
+ description AHD-AF0-R4-SRV-03 iLO
+ switchport access vlan 3
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/2
+ description AHD-AF0-R4-SRV-01 iLO
+ switchport access vlan 3
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/3
+ description AHD-AF0-R4-SRV-02 iLO
+ switchport access vlan 3
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/4
+ description AHD-AF0-R4-SRV-01 vMotion
+ switchport access vlan 110
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/5
+ description AHD-AF0-R4-SRV-02 vMotion
+ switchport access vlan 110
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/6
+ description AHD-AF0-R4-SRV-03 vMotion
+ switchport access vlan 110
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/7
+ description AHD-AF0-R4-SRV-04 iLO
+ switchport access vlan 3
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/8
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/9
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/10
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/11
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/12
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/13
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/14
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/15
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/16
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/17
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/18
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/19
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/20
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/21
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/22
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/23
+ description UPLINK AHD-AF0-R4-SWT-01 (bonding2_sfp-sfpplus21)
+ switchport trunk allowed vlan 2,3,110
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ channel-group 1 mode active
+!
+interface GigabitEthernet1/0/24
+ description UPLINK AHD-AF0-R4-SWT-01 (bonding2_sfp-sfpplus21)
+ switchport trunk allowed vlan 2,3,110
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ channel-group 1 mode active
+!
+interface GigabitEthernet1/0/25
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/26
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/27
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/28
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan2
+ description MGMT
+ ip address 172.30.0.30 255.255.255.0
+!
+ip default-gateway 172.30.0.1
+no ip http server
+no ip http secure-server
+!
+!
+ip access-list standard Trusted_SNMP
+ permit 172.16.0.16
+!
+logging source-interface Vlan2
+logging host 172.16.0.20
+!
+snmp-server community S@Pr4NMP RO Trusted_SNMP
+snmp-server location AHD AF0 [35.647593, 51.203148]
+snmp ifmib ifindex persist
+!
+privilege exec level 15 show startup-config
+privilege exec level 15 show running-config
+privilege exec level 1 show
+!
+line con 0
+ login local
+line vty 0 4
+ exec-timeout 30 0
+ login local
+ transport input all
+line vty 5 15
+ exec-timeout 30 0
+ login local
+ transport input all
+!
+ntp server 172.31.0.123
+mac address-table notification change
+mac address-table notification mac-move
+end
+
