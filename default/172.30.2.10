@@ -1,0 +1,621 @@
+! Cisco IOS Software, C2960S Software (C2960S-UNIVERSALK9-M), Version 15.2(2a)E1, RELEASE SOFTWARE (fc1)
+! 
+! Image: Software: C2960S-UNIVERSALK9-M, 15.2(2a)E1, RELEASE SOFTWARE (fc1)
+! Image: Compiled: Wed 10-Dec-14 03:54 by prod_rel_team
+! Image: flash:c2960s-universalk9-mz.152-2a.E1.bin
+! Chassis type: WS-C2960S-48FPS-L
+! Memory: main 131072K
+! Processor ID: FOC1614Y0SE
+! CPU: PowerPC
+! 
+! VTP: VTP Version capable             : 1 to 3
+! VTP: VTP version running             : 1
+! VTP: VTP Domain Name                 : 
+! VTP: VTP Pruning Mode                : Disabled
+! VTP: VTP Traps Generation            : Disabled
+! VTP: Device ID                       : 5c50.15b6.3a80
+! VTP: Local updater ID is 172.30.2.10 on interface Vl2 (lowest numbered VLAN interface found)
+! VTP: Feature VLAN:
+! VTP: --------------
+! VTP: VTP Operating Mode                : Server
+! VTP: Maximum VLANs supported locally   : 1005
+! VTP: Number of existing VLANs          : 13
+! VTP: Configuration Revision            : 8
+! VTP: MD5 digest                        : 0xEC 0x8F 0x64 0xD6 0x01 0x10 0x38 0x99 
+! VTP:                                     0xD9 0x54 0x64 0x2C 0xA9 0x2E 0x40 0x21 
+! 
+! NAME: "1", DESCR: "WS-C2960S-48FPS-L"
+! PID: WS-C2960S-48FPS-L , VID: V03  , SN: FOC1614Y0SE
+! 
+! 
+!
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec localtime show-timezone year
+service timestamps log datetime msec localtime show-timezone year
+service password-encryption
+service linenumber
+service sequence-numbers
+!
+hostname AHD-CF0-R1-SWT-01
+!
+boot-start-marker
+boot-end-marker
+!
+!
+username sapramin privilege 15 secret 5 $1$KkWI$yajG6jY4achU1rlaD6pOy1
+username oxidized privilege 15 secret 5 $1$fVf8$4BNfDD074PZmlioGcrMIJ0
+no aaa new-model
+clock timezone IRST 3 30
+switch 1 provision ws-c2960s-48fps-l
+!
+!
+no ip domain-lookup
+ip domain-name sapramin.com
+ip name-server 172.31.0.53
+login on-failure log
+login on-success log
+!
+!
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-364264064
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-364264064
+ revocation-check none
+ rsakeypair TP-self-signed-364264064
+!
+!
+crypto pki certificate chain TP-self-signed-364264064
+ certificate self-signed 01
+  30820254 308201BD A0030201 02020101 300D0609 2A864886 F70D0101 04050030 
+  30312E30 2C060355 04031325 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 33363432 36343036 34301E17 0D393330 33303130 30303332 
+  315A170D 32303031 30313030 30303030 5A303031 2E302C06 03550403 1325494F 
+  532D5365 6C662D53 69676E65 642D4365 72746966 69636174 652D3336 34323634 
+  30363430 819F300D 06092A86 4886F70D 01010105 0003818D 00308189 02818100 
+  D7D59050 5B1DE796 B87FCC2C 93D2CAE0 70D86D4A 0EA2CA63 3E555987 297FB6AD 
+  54642DF7 4B7FA840 F08BB53F 002A0913 DDBD4D65 0494C9BE 1F55B8FA 2C6DC089 
+  BC7DACF0 D5D72F9A CA2C4C27 B84692A2 717815AF 67C13CC7 F0CD2914 C99E1BDA 
+  3D32FD64 987DF778 EFCF3F3D E52A41EC 0D14D28A B40B5D74 B0D50DB6 EFE67ABB 
+  02030100 01A37E30 7C300F06 03551D13 0101FF04 05300301 01FF3029 0603551D 
+  11042230 20821E41 48442D43 46302D52 312D5357 542D3031 2E736170 72616D69 
+  6E2E636F 6D301F06 03551D23 04183016 8014A273 A29A16E0 7E2F76A8 CD8FF5DC 
+  F95F464C AF2B301D 0603551D 0E041604 14A273A2 9A16E07E 2F76A8CD 8FF5DCF9 
+  5F464CAF 2B300D06 092A8648 86F70D01 01040500 03818100 A11B50C8 FF9F750E 
+  9FC362BF 5F881B35 23475C87 ADFBFDCF 22105896 5F2AC2CA 39FA3E6A DF3CE965 
+  A6A758BF BA4765DA 78289287 84FE1EC1 E2C4D322 6D301533 347DEB96 06785BBD 
+  1FEA2770 10C5FA4E 910BFED0 9C1D2CB1 10E8A006 1B913AF9 A24944AA A83DE5CB 
+  AB9E376E 410FA1A5 3D85384D 23B9D2F0 AC793C4E 4372350E
+  	quit
+memory free low-watermark processor 20000
+memory free low-watermark IO 20000
+!
+spanning-tree mode rapid-pvst
+spanning-tree portfast bpduguard default
+spanning-tree extend system-id
+errdisable recovery cause channel-misconfig
+port-channel load-balance src-dst-ip
+!
+!
+!
+!
+vlan internal allocation policy ascending
+!
+ip ssh time-out 60
+ip ssh logging events
+ip ssh version 2
+lldp run
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Port-channel1
+ description UPLINK AHD-CF0-R1-RTR-1 (bonding1)
+ switchport trunk allowed vlan 1,2,102-108
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+!
+interface FastEthernet0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/0/1
+ description AHD-CF0-RF-CAM-26
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/2
+ description AHD-CF0-RF-CAM-05
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/3
+ description AHD-CF0-RF-CAM-25
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/4
+ description AHD-CF0-RF-CAM-07
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/5
+ description AHD-CF0-RF-CAM-24
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/6
+ description AHD-CF0-RF-CAM-06
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/7
+ description AHD-CF0-RF-CAM-23
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/8
+ description AHD-CF2-RF-CAM-04
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/9
+ description AHD-CF0-RF-CAM-22
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/10
+ description DOWNLINK AHD-CF2-RF-WAP-01
+ switchport trunk native vlan 2
+ switchport trunk allowed vlan 2,105,107,108
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/11
+ description AHD-CF0-RF-CAM-21
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/12
+ description AHD-CF2-RF-CAM-01
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/13
+ description AHD-CF0-RF-CAM-20
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/14
+ description AHD-CF2-RF-CAM-02
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/15
+ description AHD-CF0-RF-CAM-19
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/16
+ description AHD-CF2-RF-CAM-03
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/17
+ description AHD-CF0-RF-CAM-18
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/18
+ description AHD-CF2-RF-CAM-05
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/19
+ description AHD-CF0-RF-CAM-17
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/20
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/21
+ description AHD-CF0-RF-CAM-16
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/22
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/23
+ description AHD-CF0-RF-CAM-15
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/24
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/25
+ description AHD-CF0-RF-CAM-14
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/26
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/27
+ description AHD-CF0-RF-CAM-13
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/28
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/29
+ description AHD-CF0-RF-CAM-11
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/30
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/31
+ description AHD-CF0-RF-CAM-12
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/32
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/33
+ description AHD-CF0-RF-CAM-09
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/34
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/35
+ description AHD-CF0-RF-CAM-08
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/36
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/37
+ description AHD-CF0-RF-CAM-03
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/38
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/39
+ description AHD-CF0-RF-CAM-27
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/40
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/41
+ description AHD-CF0-RF-CAM-10
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/42
+ description UPLINK AHD-CF0-R1-RTR-01 (bonding1_ether5)
+ switchport trunk allowed vlan 1,2,102-108
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ channel-group 1 mode active
+!
+interface GigabitEthernet1/0/43
+ description AHD-CF0-RF-CAM-01
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/44
+ description AHD-CF0-R1-NVR-01 (NIC 2)
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/45
+ description AHD-CF0-RF-CAM-02
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/46
+ description UPLINK AHD-CF0-R1-RTR-01 (bonding1_ether3)
+ switchport trunk allowed vlan 1,2,102-108
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ channel-group 1 mode active
+!
+interface GigabitEthernet1/0/47
+ description AHD-CF0-RF-CAM-04
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/48
+ description AHD-CF0-R1-NVR-01 (NIC 1)
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/49
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/50
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/51
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/52
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface Vlan1
+ ip address dhcp
+!
+interface Vlan2
+ description MGMT
+ ip address 172.30.2.10 255.255.255.0
+!
+ip default-gateway 172.30.2.1
+ip http server
+ip http secure-server
+!
+!
+ip access-list standard Trusted_SNMP
+ permit 172.16.0.16
+!
+logging source-interface Vlan2
+logging host 172.16.0.20 transport udp port 1514
+!
+snmp-server community S@Pr4NMP RO Trusted_SNMP
+snmp-server location AHD CF0 [35.646653, 51.199973]
+snmp ifmib ifindex persist
+!
+no vstack
+!
+line con 0
+ login local
+line vty 0 4
+ exec-timeout 30 0
+ login local
+line vty 5 15
+ exec-timeout 30 0
+ login local
+!
+ntp server 172.31.0.123
+mac address-table notification change
+mac address-table notification mac-move
+end
+
