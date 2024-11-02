@@ -1,0 +1,345 @@
+#                   version: 7.16.1 (stable)
+#          factory-software: 7.5
+#              total-memory: 1024.0MiB
+#                       cpu: ARM64
+#                 cpu-count: 4
+#           total-hdd-space: 128.0MiB
+#         architecture-name: arm64
+#                board-name: hAP ax^2
+#                  platform: MikroTik
+#   installed-version: 7.16.1
+# Flags: U - UNDOABLE
+# Columns: ACTION, BY, POLICY, TIME
+#   ACTION            BY     POLICY  TIME               
+# U nat rule changed  admin  write   2024-11-02 15:24:22
+# U nat rule changed  admin  write   2024-11-02 15:23:22
+# U nat rule changed  admin  write   2024-11-02 15:22:22
+# U nat rule changed  admin  write   2024-11-02 15:21:22
+# U nat rule changed  admin  write   2024-11-02 15:20:22
+# U nat rule changed  admin  write   2024-11-02 15:19:22
+# U nat rule changed  admin  write   2024-11-02 15:18:22
+# U nat rule changed  admin  write   2024-11-02 15:17:22
+# U nat rule changed  admin  write   2024-11-02 15:16:22
+# U nat rule changed  admin  write   2024-11-02 15:15:22
+# U nat rule changed  admin  write   2024-11-02 15:14:22
+# U nat rule changed  admin  write   2024-11-02 15:13:22
+# U nat rule changed  admin  write   2024-11-02 15:12:22
+# U nat rule changed  admin  write   2024-11-02 15:11:22
+# U nat rule changed  admin  write   2024-11-02 15:10:22
+# U nat rule changed  admin  write   2024-11-02 15:09:22
+# U nat rule changed  admin  write   2024-11-02 15:08:22
+# U nat rule changed  admin  write   2024-11-02 15:07:22
+# U nat rule changed  admin  write   2024-11-02 15:06:22
+# U nat rule changed  admin  write   2024-11-02 15:05:22
+# U nat rule changed  admin  write   2024-11-02 15:04:22
+# U nat rule changed  admin  write   2024-11-02 15:03:22
+# U nat rule changed  admin  write   2024-11-02 15:02:22
+# U nat rule changed  admin  write   2024-11-02 15:01:22
+# U nat rule changed  admin  write   2024-11-02 15:00:22
+# U nat rule changed  admin  write   2024-11-02 14:59:22
+# U nat rule changed  admin  write   2024-11-02 14:58:22
+# U nat rule changed  admin  write   2024-11-02 14:57:22
+# U nat rule changed  admin  write   2024-11-02 14:56:22
+# U nat rule changed  admin  write   2024-11-02 14:55:22
+# U nat rule changed  admin  write   2024-11-02 14:54:22
+# U nat rule changed  admin  write   2024-11-02 14:53:22
+# U nat rule changed  admin  write   2024-11-02 14:52:22
+# U nat rule changed  admin  write   2024-11-02 14:51:22
+# U nat rule changed  admin  write   2024-11-02 14:50:22
+# U nat rule changed  admin  write   2024-11-02 14:49:22
+# U nat rule changed  admin  write   2024-11-02 14:48:22
+# U nat rule changed  admin  write   2024-11-02 14:47:22
+# U nat rule changed  admin  write   2024-11-02 14:46:22
+# U nat rule changed  admin  write   2024-11-02 14:45:22
+# U nat rule changed  admin  write   2024-11-02 14:44:22
+# U nat rule changed  admin  write   2024-11-02 14:43:22
+# U nat rule changed  admin  write   2024-11-02 14:42:22
+# U nat rule changed  admin  write   2024-11-02 14:41:22
+# U nat rule changed  admin  write   2024-11-02 14:40:22
+# U nat rule changed  admin  write   2024-11-02 14:39:22
+# U nat rule changed  admin  write   2024-11-02 14:38:22
+# U nat rule changed  admin  write   2024-11-02 14:37:22
+# U nat rule changed  admin  write   2024-11-02 14:36:22
+# U nat rule changed  admin  write   2024-11-02 14:35:22
+# U nat rule changed  admin  write   2024-11-02 14:34:22
+# U nat rule changed  admin  write   2024-11-02 14:33:22
+# U nat rule changed  admin  write   2024-11-02 14:32:22
+# U nat rule changed  admin  write   2024-11-02 14:31:22
+# U nat rule changed  admin  write   2024-11-02 14:30:22
+# U nat rule changed  admin  write   2024-11-02 14:29:22
+# U nat rule changed  admin  write   2024-11-02 14:28:22
+# U nat rule changed  admin  write   2024-11-02 14:27:22
+# U nat rule changed  admin  write   2024-11-02 14:26:22
+# U nat rule changed  admin  write   2024-11-02 14:25:22
+# U nat rule changed  admin  write   2024-11-02 14:24:22
+# U nat rule changed  admin  write   2024-11-02 14:23:22
+# U nat rule changed  admin  write   2024-11-02 14:22:22
+# U nat rule changed  admin  write   2024-11-02 14:21:22
+# U nat rule changed  admin  write   2024-11-02 14:20:22
+# U nat rule changed  admin  write   2024-11-02 14:19:22
+# U nat rule changed  admin  write   2024-11-02 14:18:22
+# U nat rule changed  admin  write   2024-11-02 14:17:22
+# U nat rule changed  admin  write   2024-11-02 14:16:22
+# U nat rule changed  admin  write   2024-11-02 14:15:22
+# U nat rule changed  admin  write   2024-11-02 14:14:22
+# U nat rule changed  admin  write   2024-11-02 14:13:22
+# U nat rule changed  admin  write   2024-11-02 14:12:22
+# U nat rule changed  admin  write   2024-11-02 14:11:22
+# U nat rule changed  admin  write   2024-11-02 14:10:22
+# U nat rule changed  admin  write   2024-11-02 14:09:22
+# U nat rule changed  admin  write   2024-11-02 14:08:22
+# U nat rule changed  admin  write   2024-11-02 14:07:22
+# U nat rule changed  admin  write   2024-11-02 14:06:22
+# U nat rule changed  admin  write   2024-11-02 14:05:22
+# U nat rule changed  admin  write   2024-11-02 14:04:22
+# U nat rule changed  admin  write   2024-11-02 14:03:22
+# U nat rule changed  admin  write   2024-11-02 14:02:22
+# U nat rule changed  admin  write   2024-11-02 14:01:22
+# U nat rule changed  admin  write   2024-11-02 14:00:22
+# U nat rule changed  admin  write   2024-11-02 13:59:22
+# U nat rule changed  admin  write   2024-11-02 13:58:22
+# U nat rule changed  admin  write   2024-11-02 13:57:22
+# U nat rule changed  admin  write   2024-11-02 13:56:22
+# U nat rule changed  admin  write   2024-11-02 13:55:22
+# U nat rule changed  admin  write   2024-11-02 13:54:22
+# U nat rule changed  admin  write   2024-11-02 13:53:22
+# U nat rule changed  admin  write   2024-11-02 13:52:22
+# U nat rule changed  admin  write   2024-11-02 13:51:22
+# U nat rule changed  admin  write   2024-11-02 13:50:22
+# U nat rule changed  admin  write   2024-11-02 13:49:22
+# U nat rule changed  admin  write   2024-11-02 13:48:22
+# U nat rule changed  admin  write   2024-11-02 13:47:22
+# U nat rule changed  admin  write   2024-11-02 13:46:22
+# U nat rule changed  admin  write   2024-11-02 13:45:22
+# 
+# software id = AGAJ-NBU1
+#
+# model = C52iG-5HaxD2HaxD
+# serial number = HEJ08ZCMEYJ
+/interface bridge
+add disabled=yes name=bridge-Guest port-cost-mode=short
+add disabled=yes name=bridge-IoT port-cost-mode=short
+add name=bridge-LAN port-cost-mode=short
+add name=bridge-MGMT port-cost-mode=short protocol-mode=none
+add disabled=yes name=bridge-Printer port-cost-mode=short
+add name=bridge-VoIP priority=0
+add name=bridge-WLAN port-cost-mode=short
+add comment="Router ID" name=loopback1 port-cost-mode=short protocol-mode=none
+add comment="DNS Anycast" name=loopback53 port-cost-mode=short protocol-mode=none
+add comment="NTP Anycast" name=loopback123 port-cost-mode=short protocol-mode=none
+/interface ethernet
+set [ find default-name=ether1 ] comment="WAN - MobinNet LTE"
+set [ find default-name=ether4 ] comment="DOWNLINK <SUS-AF0-R1-RTR-01> (Po1 Gi1/0/23)"
+set [ find default-name=ether5 ] comment="DOWNLINK <SUS-AF0-R1-RTR-01> (Po1 Gi1/0/24)"
+/interface bonding
+add comment="DOWNLINK SUS-AF0-R1-SWT-01 (Po1)" mode=802.3ad name=bonding1 slaves=ether4,ether5 transmit-hash-policy=layer-3-and-4 up-delay=100ms
+/interface vlan
+add comment=MGMT interface=bonding1 name=bonding1.2 vlan-id=2
+add comment="Security Devices" interface=bonding1 name=bonding1.102 vlan-id=102
+add comment=VoIP interface=bonding1 name=bonding1.103 vlan-id=103
+add comment=LAN interface=bonding1 name=bonding1.104 vlan-id=104
+/interface list
+add name=DNS_capture
+/interface wifi security
+add authentication-types=wpa2-psk,wpa3-psk disabled=no encryption=ccmp,gcmp,ccmp-256,gcmp-256 name="Safe Service" passphrase=Amin@sapra wps=disable
+add authentication-types=wpa2-psk,wpa3-psk disabled=no encryption=ccmp,gcmp,ccmp-256,gcmp-256 name="Safe Service IoT" passphrase=S@PR4io7 wps=disable
+add authentication-types=wpa2-psk,wpa3-psk disabled=no encryption=ccmp,gcmp,ccmp-256,gcmp-256 name="Safe Service Guest" passphrase=SafeService@001 wps=disable
+add authentication-types=wpa2-psk,wpa3-psk disabled=no encryption=ccmp,gcmp,ccmp-256,gcmp-256 name="Safe Service Printer" passphrase=S@Pr1nT3rZ wps=disable
+/interface wifi configuration
+add disabled=no mode=ap name=WLAN security="Safe Service" ssid="Safe Service"
+add disabled=no mode=ap name=IoT security="Safe Service IoT" ssid="Safe Service IoT"
+add disabled=no mode=ap name=Guest security="Safe Service Guest" ssid="Safe Service Guest"
+add disabled=no mode=ap name=Printer security="Safe Service Printer" ssid="Safe Service Printer"
+/interface wifi
+set [ find default-name=wifi1 ] channel.band=5ghz-ax .width=20/40mhz configuration=WLAN configuration.mode=ap disabled=no
+set [ find default-name=wifi2 ] channel.band=2ghz-ax .width=20mhz configuration=WLAN configuration.mode=ap disabled=no
+add configuration=Guest configuration.mode=ap mac-address=4A:A9:8A:DA:5A:6E master-interface=wifi2 name="Guest 2.4"
+add configuration=Guest configuration.mode=ap mac-address=4A:A9:8A:DA:5A:6F master-interface=wifi1 name="Guest 5"
+add configuration=IoT configuration.mode=ap mac-address=4A:A9:8A:DA:5A:6D master-interface=wifi2 name="IoT 2.4"
+add configuration=IoT configuration.mode=ap mac-address=4A:A9:8A:DA:5A:6C master-interface=wifi1 name="IoT 5"
+add configuration=Printer configuration.mode=ap mac-address=4A:A9:8A:DA:5A:70 master-interface=wifi2 name="Printer 2.4"
+add configuration=Printer configuration.mode=ap mac-address=4A:A9:8A:DA:5A:71 master-interface=wifi1 name="Printer 5"
+/ip ipsec proposal
+set [ find default=yes ] auth-algorithms=sha512,sha256,sha1 enc-algorithms="aes-256-cbc,aes-256-ctr,aes-256-gcm,aes-192-cbc,aes-192-ctr,aes-192-gcm,aes-128-cbc,aes-128-ctr,aes-128-gcm"
+/ip pool
+add name=dhcp_pool_LAN ranges=172.16.106.21-172.16.106.254
+add name=dhcp-WLAN ranges=172.16.107.21-172.16.107.254
+add name=dhcp_pool_IoT ranges=172.16.108.11-172.16.108.126
+add name=dhcp_pool_Guest ranges=172.16.108.134-172.16.108.190
+add name=dhcp_pool_Printer ranges=172.16.108.198-172.16.108.254
+add name=dhcp_pool_VoIP ranges=172.16.105.139-172.16.105.190
+/ip dhcp-server
+add address-pool=dhcp_pool_LAN interface=bridge-LAN lease-time=2d name=dhcp-LAN
+add address-pool=dhcp-WLAN interface=bridge-WLAN lease-time=2d name=dhcp-WLAN
+add address-pool=dhcp_pool_IoT disabled=yes interface=bridge-IoT lease-time=2d name=dhcp-IoT
+add address-pool=dhcp_pool_IoT disabled=yes interface=bridge-Guest lease-time=2d name=dhcp-Guest
+add address-pool=dhcp_pool_IoT disabled=yes interface=bridge-Printer lease-time=2d name=dhcp-Printer
+add address-pool=dhcp_pool_VoIP interface=bridge-VoIP lease-time=1w name=dhcp_VoIP
+/ip smb users
+set [ find default=yes ] disabled=yes
+/ppp profile
+add change-tcp-mss=yes name=HQ use-encryption=required
+/interface l2tp-client
+add allow-fast-path=yes connect-to=80.210.28.192 disabled=no ipsec-secret=S@pr4min max-mru=1500 max-mtu=1500 mrru=1600 name=l2tp-AHD-AF0-R4-RTR-01 password=SUS-AF0-R1-RTR-01 profile=HQ use-ipsec=yes user=SUS-AF0-R1-RTR-01
+add allow-fast-path=yes connect-to=85.198.25.40 disabled=no ipsec-secret=S@pr4min max-mru=1500 max-mtu=1500 mrru=1600 name=l2tp-AHD-CF0-R1-RTR-01 password=SUS-AF0-R1-RTR-01 profile=HQ use-ipsec=yes user=SUS-AF0-R1-RTR-01
+/routing bgp template
+add address-families=ip,ipv6 as=65666 disabled=no input.affinity=main multihop=yes name=HQ output.affinity=main .network=BGP_Network router-id=172.31.2.81 routing-table=main use-bfd=yes
+/routing id
+add disabled=no id=172.31.2.81 name=id-1 select-dynamic-id=""
+/routing ospf instance
+add disabled=no name=ospf-instance-1 out-filter-chain=ospf-out redistribute=connected,static router-id=id-1
+/routing ospf area
+add area-id=1.0.0.3 disabled=no instance=ospf-instance-1 name=ospf-area-1.0.0.3 nssa-translator=candidate type=nssa
+/snmp community
+set [ find default=yes ] addresses=172.16.0.16/32,172.16.0.24/32 name=S@Pr4NMP
+/system logging action
+add name=syslog remote=172.16.0.20 remote-port=1514 src-address=172.30.17.17 target=remote
+/interface bridge port
+add bridge=bridge-MGMT interface=ether2 internal-path-cost=10 path-cost=10
+add bridge=bridge-LAN interface=ether3 internal-path-cost=10 path-cost=10
+add bridge=bridge-WLAN interface=wifi1 internal-path-cost=10 path-cost=10
+add bridge=bridge-WLAN interface=wifi2 internal-path-cost=10 path-cost=10
+add bridge=bridge-IoT disabled=yes interface="IoT 2.4" internal-path-cost=10 path-cost=10
+add bridge=bridge-IoT disabled=yes interface="IoT 5" internal-path-cost=10 path-cost=10
+add bridge=bridge-IoT disabled=yes interface="Guest 2.4" internal-path-cost=10 path-cost=10
+add bridge=bridge-IoT disabled=yes interface="Guest 5" internal-path-cost=10 path-cost=10
+add bridge=bridge-IoT disabled=yes interface="Printer 2.4" internal-path-cost=10 path-cost=10
+add bridge=bridge-IoT disabled=yes interface="Printer 5" internal-path-cost=10 path-cost=10
+add bridge=bridge-LAN interface=bonding1.104
+add bridge=bridge-MGMT interface=bonding1.2
+add bridge=bridge-VoIP interface=bonding1.103
+/ip firewall connection tracking
+set udp-timeout=10s
+/ip neighbor discovery-settings
+set discover-interface-list=!dynamic
+/interface list member
+add interface=bridge-MGMT list=DNS_capture
+add interface=bridge-LAN list=DNS_capture
+add interface=bridge-Printer list=DNS_capture
+add interface=bridge-VoIP list=DNS_capture
+add interface=bridge-WLAN list=DNS_capture
+add interface=bonding1.102 list=DNS_capture
+/interface wifi access-list
+add action=reject disabled=no mac-address=4C:31:2D:11:37:B4
+/ip address
+add address=172.30.17.17/28 interface=bridge-MGMT network=172.30.17.16
+add address=172.16.106.1/24 interface=bridge-LAN network=172.16.106.0
+add address=172.16.107.1/24 interface=bridge-WLAN network=172.16.107.0
+add address=172.16.108.1/25 disabled=yes interface=bridge-IoT network=172.16.108.0
+add address=172.16.108.193/26 disabled=yes interface=bridge-Printer network=172.16.108.192
+add address=172.16.108.129/26 disabled=yes interface=bridge-Guest network=172.16.108.128
+add address=172.31.2.81 interface=loopback1 network=172.31.2.81
+add address=172.31.0.123 interface=loopback123 network=172.31.0.123
+add address=172.31.0.53 interface=loopback53 network=172.31.0.53
+add address=172.16.109.254/30 interface=ether1 network=172.16.109.252
+add address=172.16.105.1/25 interface=bonding1.102 network=172.16.105.0
+add address=172.16.105.129/25 interface=bonding1.103 network=172.16.105.128
+/ip dhcp-client
+add interface=ether1 use-peer-dns=no use-peer-ntp=no
+/ip dhcp-server network
+add address=172.16.105.128/25 comment=VoIP dns-server=172.16.0.11 gateway=172.16.105.129 ntp-server=172.31.0.123
+add address=172.16.106.0/24 comment=LAN dns-server=172.16.0.11 gateway=172.16.106.1 ntp-server=172.31.0.123
+add address=172.16.107.0/24 comment=WLAN dns-server=172.16.0.11 gateway=172.16.107.1 ntp-server=172.31.0.123
+add address=172.16.108.0/25 comment=IoT dns-server=172.16.0.11 gateway=172.16.108.1 ntp-server=172.31.0.123
+add address=172.16.108.128/26 comment=Guest dns-server=172.16.0.11 gateway=172.16.108.129 ntp-server=172.31.0.123
+add address=172.16.108.192/26 comment=Printer dns-server=172.16.0.11 gateway=172.16.108.193 ntp-server=172.31.0.123
+/ip dns
+set allow-remote-requests=yes servers=172.16.0.11
+/ip dns static
+add address=172.16.0.11 name=safeservice.local type=A
+add address=172.16.0.11 name=ss type=A
+/ip firewall address-list
+add address=192.168.0.0/16 comment=RFC6890 list=bogon
+add address=172.16.0.0/12 comment=RFC6890 list=bogon
+add address=10.0.0.0/8 comment=RFC6890 list=bogon
+add address=0.0.0.0/8 comment=RFC6890 list=bogon
+add address=169.254.0.0/16 comment=RFC6890 list=bogon
+add address=127.0.0.0/8 comment=RFC6890 list=bogon
+add address=224.0.0.0/4 comment=Multicast list=bogon
+add address=198.18.0.0/15 comment=RFC6890 list=bogon
+add address=192.0.0.0/24 comment=RFC6890 list=bogon
+add address=192.0.2.0/24 comment=RFC6890 list=bogon
+add address=198.51.100.0/24 comment=RFC6890 list=bogon
+add address=203.0.113.0/24 comment=RFC6890 list=bogon
+add address=100.64.0.0/10 comment=RFC6890 list=bogon
+add address=240.0.0.0/4 comment=RFC6890 list=bogon
+add address=10.0.0.0/8 list=allowed_bogon_wan
+add address=172.16.104.0/21 comment="Shush supernet" list=BGP_Network
+add address=172.30.17.16/28 comment=MGMT list=BGP_Network
+add address=172.31.2.80/28 comment=Loopbacks list=BGP_Network
+/ip firewall filter
+add action=drop chain=input comment="Drop invalid input connections" connection-state=invalid
+add action=drop chain=forward comment="Drop invalid connections to WAN" connection-state=invalid out-interface=ether1
+add action=drop chain=forward comment="Drop invalid connections from WAN" connection-state=invalid in-interface=ether1
+/ip firewall nat
+add action=src-nat chain=srcnat out-interface=ether1 to-addresses=188.213.71.118
+add action=redirect chain=dstnat comment="DNS Capture" disabled=yes dst-port=53 in-interface-list=DNS_capture protocol=udp
+/ip firewall raw
+# in/out-interface matcher not possible when interface (ether5) is slave - use master instead (bonding1)
+add action=drop chain=prerouting comment="Drop DNS from WAN" dst-port=53 in-interface=ether5 protocol=udp
+add action=drop chain=prerouting comment="Drop suspiscious/malicious sources" src-address-list=malicious
+add action=drop chain=prerouting comment="Drop suspiscious/malicious destinations" dst-address-list=malicious
+# in/out-interface matcher not possible when interface (ether5) is slave - use master instead (bonding1)
+add action=accept chain=prerouting comment="Allow some bogon packets from WAN" in-interface=ether5 src-address-list=allowed_bogon_wan
+add action=drop chain=prerouting comment="Drop bogon packets from WAN" disabled=yes in-interface=ether5 src-address-list=bogon
+/ip firewall service-port
+set ftp disabled=yes
+set tftp disabled=yes
+set h323 disabled=yes
+set sip disabled=yes
+set pptp disabled=yes
+/ip ipsec profile
+set [ find default=yes ] dpd-interval=2m dpd-maximum-failures=5
+/ip route
+add blackhole comment="Shush supernet" disabled=no distance=1 dst-address=172.16.104.0/21 gateway="" routing-table=main scope=30 suppress-hw-offload=no target-scope=10
+add blackhole comment="Loopbacks aggregate" disabled=no dst-address=172.31.2.80/28 gateway="" routing-table=main suppress-hw-offload=no
+/ip service
+set telnet address=172.16.0.0/12
+set ftp disabled=yes
+set www disabled=yes
+set api disabled=yes
+set winbox port=8595
+set api-ssl disabled=yes
+/ip smb shares
+set [ find default=yes ] directory=/pub
+/ip ssh
+set strong-crypto=yes
+/routing bfd configuration
+add disabled=no interfaces=l2tp-AHD-AF0-R4-RTR-01 min-rx=1s min-tx=1s multiplier=5
+add disabled=no interfaces=l2tp-AHD-CF0-R1-RTR-01 min-rx=1s min-tx=1s multiplier=5
+/routing bgp connection
+add address-families=ip,ipv6 as=65666 disabled=no input.affinity=main local.address=172.29.1.2 .role=ibgp .ttl=1 multihop=yes name=AHD-AF0-R4-RTR-01 output.affinity=main .network=BGP_Network remote.address=172.29.0.0/32 .as=65666 router-id=172.31.2.81 routing-table=main tcp-md5-key=S@PR4m1N templates=HQ use-bfd=yes
+add address-families=ip,ipv6 as=65666 disabled=no input.affinity=main local.address=172.29.2.2 .role=ibgp .ttl=1 multihop=yes name=AHD-CF0-R1-RTR-01 output.affinity=main .network=BGP_Network remote.address=172.29.0.16/32 .as=65666 router-id=172.31.2.81 routing-table=main tcp-md5-key=S@PR4m1N templates=HQ use-bfd=yes
+/routing filter rule
+add chain=ospf-out comment=Loopbacks disabled=no rule="if (protocol connected && dst in 172.31.2.80/28) {accept}"
+add chain=ospf-out comment="Safe Service supernet summary route" disabled=no rule="if (protocol static && dst == 172.16.104.0/21) {accept}"
+add chain=ospf-out comment=MGMT disabled=no rule="if (protocol connected && dst == 172.30.17.16/28) {accept}"
+/routing ospf interface-template
+add area=ospf-area-1.0.0.3 auth=sha256 auth-id=1 auth-key=S@PR4m1N cost=100 disabled=no interfaces=l2tp-AHD-AF0-R4-RTR-01 networks=172.29.0.0/32 type=ptp use-bfd=yes
+add area=ospf-area-1.0.0.3 auth=sha256 auth-id=1 auth-key=S@PR4m1N cost=110 disabled=no interfaces=l2tp-AHD-CF0-R1-RTR-01 networks=172.29.0.16/32 type=ptp use-bfd=yes
+/snmp
+set contact=it@sapramin.com enabled=yes location="SUS AF0 [35.659168, 51.439831]" src-address=172.30.17.17
+/system clock
+set time-zone-name=Asia/Tehran
+/system identity
+set name=SUS-AF0-R1-RTR-01
+/system logging
+add action=syslog topics=critical
+add action=syslog topics=warning
+add action=syslog topics=info
+add action=syslog topics=error
+add disabled=yes topics=debug,bgp
+/system note
+set show-at-login=no
+/system ntp client
+set enabled=yes
+/system ntp server
+set enabled=yes
+/system ntp client servers
+add address=time.windows.com
+add address=time.google.com
+add address=ir.pool.ntp.org
+/system scheduler
+add interval=1m name=DNS_Check on-event="/system script run DNS_Check" policy=ftp,reboot,read,write,policy,test,password,sniff,sensitive,romon start-time=startup
+/system script
+add dont-require-permissions=no name=DNS_Check owner=admin policy=ftp,reboot,read,write,policy,test,password,sniff,sensitive,romon source=":local PrimaryDNS \"172.16.0.11\";\r\n:local BackupDNS \"8.8.8.8,1.1.1.1,9.9.9.9\";\r\n:local TestDomain \"google.com\";\r\n\r\n:local ConfiguredDNS [/ip dns get servers];\r\n\r\n:if (\$ConfiguredDNS = \$PrimaryDNS) do={\r\n    :do {\r\n        /ip/firewall/nat/disable [find where comment=\"DNS Capture\"]\r\n        :put [:resolve \$TestDomain server \$PrimaryDNS];\r\n    } on-error={\r\n        log warning \"Primary DNS \$PrimaryDNS query failed. Setting \$BackupDNS as DNS servers\";\r\n        /ip dns set servers=\$BackupDNS;\r\n        /ip/firewall/nat/enable [find where comment=\"DNS Capture\"]\r\n    }\r\n} else={\r\n    :do {\r\n        :put [:resolve \$TestDomain server \$PrimaryDNS];\r\n        log warning \"Primary DNS \$PrimaryDNS is back online. Setting \$PrimaryDNS as DNS server\";\r\n        /ip dns set servers=\$PrimaryDNS;\r\n        /ip dns cache flush;\r\n    } on-error={ }\r\n}"
