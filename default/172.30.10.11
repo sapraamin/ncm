@@ -1,0 +1,625 @@
+! Cisco IOS Software, C2960S Software (C2960S-UNIVERSALK9-M), Version 15.2(2a)E1, RELEASE SOFTWARE (fc1)
+! 
+! Image: Software: C2960S-UNIVERSALK9-M, 15.2(2a)E1, RELEASE SOFTWARE (fc1)
+! Image: Compiled: Wed 10-Dec-14 03:54 by prod_rel_team
+! Image: flash:c2960s-universalk9-mz.152-2a.E1.bin
+! Chassis type: WS-C2960S-48LPD-L
+! Memory: main 131072K
+! Processor ID: FOC1626Y2XS
+! CPU: PowerPC
+! 
+! VTP: VTP Version capable             : 1 to 3
+! VTP: VTP version running             : 1
+! VTP: VTP Domain Name                 : 
+! VTP: VTP Pruning Mode                : Disabled
+! VTP: VTP Traps Generation            : Disabled
+! VTP: Device ID                       : 64d8.14c5.7a00
+! VTP: Local updater ID is 172.30.10.11 on interface Vl2 (lowest numbered VLAN interface found)
+! VTP: Feature VLAN:
+! VTP: --------------
+! VTP: VTP Operating Mode                : Server
+! VTP: Maximum VLANs supported locally   : 1005
+! VTP: Number of existing VLANs          : 13
+! VTP: Configuration Revision            : 11
+! VTP: MD5 digest                        : 0xD3 0x1C 0xC6 0xAB 0xAD 0x9F 0xF4 0x63 
+! VTP:                                     0xDF 0xA5 0xA9 0x83 0x4A 0x0A 0xEA 0xF8 
+! 
+! NAME: "1", DESCR: "WS-C2960S-48LPD-L"
+! PID: WS-C2960S-48LPD-L , VID: V03  , SN: FOC1626Y2XS
+! 
+! NAME: "TenGigabitEthernet1/0/1", DESCR: "SFP-10GBase-LR"
+! PID: SFP-10G-LR          , VID: V01  , SN: FNS2122M194     
+! 
+! NAME: "TenGigabitEthernet1/0/2", DESCR: "SFP-10GBase-LR"
+! PID: SFP-10G-LR          , VID: V01  , SN: FNS2122M193     
+! 
+! 
+!
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec localtime show-timezone year
+service timestamps log datetime msec localtime show-timezone year
+service password-encryption
+service linenumber
+service sequence-numbers
+!
+hostname SAE-AF2-R1-SWT-01
+!
+boot-start-marker
+boot-end-marker
+!
+!
+username sapramin privilege 15 secret 5 $1$dLom$i4u8IiVNJVIze4Pj6WGxw/
+username oxidized privilege 15 secret 5 $1$fVf8$4BNfDD074PZmlioGcrMIJ0
+username mani privilege 15 secret 4 sca2ImIQ2zVTN5KRPNEkSF8NEyQWw8ZtRfpxTP5GH4Q
+no aaa new-model
+clock timezone IRST 3 30
+switch 1 provision ws-c2960s-48lpd-l
+!
+!
+no ip domain-lookup
+ip domain-name sapramin.com
+ip name-server 172.31.0.53
+login on-failure log
+login on-success log
+!
+!
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-1740426752
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1740426752
+ revocation-check none
+ rsakeypair TP-self-signed-1740426752
+!
+!
+crypto pki certificate chain TP-self-signed-1740426752
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 31373430 34323637 3532301E 170D3933 30333031 30303138 
+  30325A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D31 37343034 
+  32363735 3230819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
+  8100AD1E 8AAF6ABC 8A07B224 A68265E4 E2D57BD9 26D6AB67 466C8097 3A441F7B 
+  4794436E 058991B1 8C253CCB 28F42899 FC2CDE8D E389769F 6A39CA25 13E13E79 
+  BAC9030E DFE3563A 2C533FB8 D0669AAB 3184F85A 44D3F5E4 1A654511 17020A8D 
+  4DB46A80 097604B6 9E0620E5 8D4F4C8C A02FB1FD 7ADB6280 87815BB9 DF7A3BB5 
+  26AD0203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603 
+  551D2304 18301680 140E4F85 5E79D740 F2BC7278 889B5DDA 11B31019 5A301D06 
+  03551D0E 04160414 0E4F855E 79D740F2 BC727888 9B5DDA11 B310195A 300D0609 
+  2A864886 F70D0101 05050003 81810087 65D9D6F1 FB2EA000 63F60E40 11C9D98A 
+  80306827 5526D857 68225507 F866D7FE 30048333 B246DC0D FAAB153E A909247F 
+  B89DC026 E3DA5552 C5A01A74 23FE8DB9 13525DFA 1D92F5D5 A2EEAD83 0C09ED44 
+  DE06458C 02A854C1 0BEB9AB7 AE023920 431440DE AA059499 AFEEA24C D3C644D1 
+  273E10A9 5A3A6491 686A8DB9 8B59B2
+  	quit
+memory free low-watermark processor 20000
+memory free low-watermark IO 20000
+!
+spanning-tree mode rapid-pvst
+spanning-tree portfast bpduguard default
+spanning-tree extend system-id
+spanning-tree pathcost method long
+spanning-tree vlan 1-200 priority 0
+errdisable recovery cause channel-misconfig
+port-channel load-balance src-dst-ip
+!
+!
+!
+!
+vlan internal allocation policy ascending
+!
+ip ssh time-out 60
+ip ssh logging events
+ip ssh version 2
+lldp run
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Port-channel1
+ description UPLINK SAE-AF2-R1-RTR-01 (bonding1)
+ switchport trunk allowed vlan 1,2,102-108
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+!
+interface Port-channel2
+ description DOWNLINK SAE-AF2-R1-SWT-02 (Po1)
+ switchport trunk allowed vlan 1,2,102-108
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+!
+interface FastEthernet0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/0/1
+ description SAE-AF2-R1-NVR-01
+ switchport access vlan 102
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/2
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/3
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/4
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/5
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/6
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/7
+ description DOWNLINK SAE-AF2-RF-SWT-01 (ether1)
+ switchport trunk allowed vlan 1,2,102-108
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+!
+interface GigabitEthernet1/0/8
+ description DOWNLINK SAE-AF2-RF-SWT-02 (ether1)
+ switchport trunk allowed vlan 1,2,102-108
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+!
+interface GigabitEthernet1/0/9
+ description DOWNLINK SAE-AF2-RF-WAP-01
+ switchport trunk native vlan 2
+ switchport trunk allowed vlan 2,105-108
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+!
+interface GigabitEthernet1/0/10
+ description DOWNLINK SAE-AF2-RF-WAP-02
+ switchport trunk native vlan 2
+ switchport trunk allowed vlan 2,105-108
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+!
+interface GigabitEthernet1/0/11
+ description SAE-AF2-RF-ICAM-04-ROOM1
+ switchport access vlan 102
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/12
+ description SAE-AF2-RF-ICAM-06-ROOM2
+ switchport access vlan 102
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/13
+ description SAE-AF2-RF-ICAM-05-Meeting_Room
+ switchport access vlan 102
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/14
+ description SAE-AF2-RF-ICAM-07-ROOM3_1
+ switchport access vlan 102
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/15
+ description SAE-AF2-RF-ICAM-08-ROOM3_2
+ switchport access vlan 102
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/16
+ description SAE-AF2-RF-ICAM-03-Entrance_3
+ switchport access vlan 102
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/17
+ description SAE-AF2-RF-ICAM-02-Entrance_2
+ switchport access vlan 102
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/18
+ description SAE-AF2-RF-ICAM-01-Entrance_1
+ switchport access vlan 102
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/19
+ description SAE-AF2-RF-ICAM-09-Kitchen
+ switchport access vlan 102
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/20
+ description SAE-AF2-RF-ICAM-10-Rack_Room
+ switchport access vlan 102
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/21
+ switchport access vlan 104
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/22
+ switchport access vlan 104
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/23
+ switchport access vlan 104
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/24
+ switchport access vlan 104
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/25
+ switchport access vlan 104
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/26
+ switchport access vlan 104
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/27
+ switchport access vlan 104
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/28
+ switchport access vlan 104
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/29
+ switchport access vlan 104
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/30
+ switchport access vlan 104
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/31
+ switchport access vlan 104
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/32
+ switchport access vlan 104
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/33
+ switchport access vlan 104
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/34
+ switchport access vlan 104
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/35
+ switchport access vlan 104
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/36
+ switchport access vlan 104
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/37
+ switchport access vlan 104
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/38
+ switchport access vlan 104
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/39
+ switchport access vlan 104
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/40
+ switchport access vlan 104
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/41
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/42
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/43
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/44
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/45
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/46
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/47
+ description UPLINK SAE-AF2-R1-RTR-01 (Eth1 bonding1)
+ switchport trunk allowed vlan 1,2,102-108
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ channel-group 1 mode active
+!
+interface GigabitEthernet1/0/48
+ description UPLINK SAE-AF2-R1-RTR-01 (Eth2 bonding1)
+ switchport trunk allowed vlan 1,2,102-108
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ channel-group 1 mode active
+!
+interface GigabitEthernet1/0/49
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/50
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface TenGigabitEthernet1/0/1
+ description DOWNLINK SAE-AF2-R1-SWT-02 (Te1/0/1 Po1)
+ switchport trunk allowed vlan 1,2,102-108
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ channel-group 2 mode active
+!
+interface TenGigabitEthernet1/0/2
+ description DOWNLINK SAE-AF2-R1-SWT-02 (Te1/0/2 Po1)
+ switchport trunk allowed vlan 1,2,102-108
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ channel-group 2 mode active
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan2
+ description MGMT
+ ip address 172.30.10.11 255.255.255.128
+!
+ip default-gateway 172.30.10.1
+no ip http server
+no ip http secure-server
+!
+!
+ip access-list standard Trusted_SNMP
+ permit 172.16.0.16
+!
+logging source-interface Vlan2
+logging host 172.16.0.20
+logging host 172.16.0.20 transport udp port 1514
+!
+snmp-server community S@Pr4NMP RO Trusted_SNMP
+snmp-server location SAE AF2 [35.731319, 51.411543]
+snmp ifmib ifindex persist
+!
+no vstack
+privilege exec level 15 show startup-config
+privilege exec level 15 show running-config
+privilege exec level 1 show
+!
+line con 0
+ login local
+line vty 0 4
+ exec-timeout 50 0
+ login local
+ transport input all
+line vty 5 15
+ exec-timeout 50 0
+ login local
+ transport input all
+!
+ntp server 172.31.0.123
+mac address-table notification change
+mac address-table notification mac-move
+end
+
