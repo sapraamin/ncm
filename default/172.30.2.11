@@ -1,0 +1,78 @@
+#                   version: 7.16.1 (stable)
+#          factory-software: 6.48.6
+#              total-memory: 64.0MiB
+#                       cpu: MIPS 74Kc V4.12
+#                 cpu-count: 1
+#           total-hdd-space: 128.0MiB
+#         architecture-name: mipsbe
+#                board-name: RB911G-5HPnD
+#                  platform: MikroTik
+#   installed-version: 7.16.1
+# 
+# software id = G3A4-PUTH
+#
+# model = RB911G-5HPnD
+# serial number = HD7080WFHAV
+/interface bridge
+add name=bridge1 port-cost-mode=short
+/interface wireless
+set [ find default-name=wlan1 ] adaptive-noise-immunity=client-mode band=5ghz-onlyn channel-width=20/40mhz-eC country=no_country_set disabled=no distance=1 frequency=4950 frequency-mode=superchannel guard-interval=long hw-retries=4 installation=outdoor mode=station-bridge radio-name=Sapra-ST rx-chains=0,1 scan-list=6040 ssid="" tx-chains=0,1 wireless-protocol=802.11
+/interface wireless nstreme
+set wlan1 enable-nstreme=yes
+/interface vlan
+add interface=bridge1 name=VLAN-2-MGMT vlan-id=2
+/interface lte apn
+set [ find default=yes ] ip-type=ipv4 use-network-apn=no
+/interface wireless security-profiles
+set [ find default=yes ] supplicant-identity=MikroTik
+/ip smb users
+set [ find default=yes ] disabled=yes
+/snmp community
+set [ find default=yes ] addresses=172.16.0.16/32 name=S@Pr4NMP
+/system logging action
+set 0 memory-lines=5000
+add name=syslog remote=172.16.0.20 src-address=172.30.2.11 target=remote
+/interface bridge port
+add bridge=bridge1 interface=wlan1 internal-path-cost=10 path-cost=10
+add bridge=bridge1 interface=ether1 internal-path-cost=10 path-cost=10
+/ip firewall connection tracking
+set enabled=no udp-timeout=10s
+/ip neighbor discovery-settings
+set discover-interface-list=!dynamic
+/ip settings
+set max-neighbor-entries=8192
+/ipv6 settings
+set disable-ipv6=yes max-neighbor-entries=8192
+/interface ovpn-server server
+set auth=sha1,md5
+/ip address
+add address=172.30.2.11/24 interface=VLAN-2-MGMT network=172.30.2.0
+/ip dns
+set servers=172.31.0.53
+/ip ipsec profile
+set [ find default=yes ] dpd-interval=2m dpd-maximum-failures=5
+/ip route
+add disabled=no distance=1 dst-address=0.0.0.0/0 gateway=172.30.2.1 pref-src="" routing-table=main scope=30 suppress-hw-offload=no target-scope=10
+/ip service
+set telnet address=172.16.0.16/32
+set ssh address=172.16.0.16/32
+/ip smb shares
+set [ find default=yes ] directory=/pub
+/ip ssh
+set strong-crypto=yes
+/routing bfd configuration
+add disabled=no
+/snmp
+set contact=it@sapramin.com enabled=yes location="AHD CRT [35.646653, 51.199973]" src-address=172.30.2.11
+/system clock
+set time-zone-name=Asia/Tehran
+/system identity
+set name=AHD-ART-RF-WST-01
+/system logging
+add disabled=yes topics=ospf,debug
+add action=syslog topics=critical
+add action=syslog topics=error
+add action=syslog topics=info
+add action=syslog topics=warning
+/system note
+set show-at-login=no
