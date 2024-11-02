@@ -1,0 +1,388 @@
+! Cisco IOS Software, C2960S Software (C2960S-UNIVERSALK9-M), Version 15.2(2a)E1, RELEASE SOFTWARE (fc1)
+! 
+! Image: Software: C2960S-UNIVERSALK9-M, 15.2(2a)E1, RELEASE SOFTWARE (fc1)
+! Image: Compiled: Wed 10-Dec-14 03:54 by prod_rel_team
+! Image: flash:/c2960s-universalk9-mz.152-2a.E1.bin
+! Chassis type: WS-C2960S-24PS-L
+! Memory: main 131072K
+! Processor ID: FOC1629X0YX
+! CPU: PowerPC
+! 
+! VTP: VTP Version capable             : 1 to 3
+! VTP: VTP version running             : 1
+! VTP: VTP Domain Name                 : 
+! VTP: VTP Pruning Mode                : Disabled
+! VTP: VTP Traps Generation            : Disabled
+! VTP: Device ID                       : 34bd.c819.c900
+! VTP: Local updater ID is 172.30.8.12 on interface Vl2 (lowest numbered VLAN interface found)
+! VTP: Feature VLAN:
+! VTP: --------------
+! VTP: VTP Operating Mode                : Server
+! VTP: Maximum VLANs supported locally   : 1005
+! VTP: Number of existing VLANs          : 14
+! VTP: Configuration Revision            : 10
+! VTP: MD5 digest                        : 0xA8 0xD6 0xDB 0x4E 0xEE 0x1D 0xF3 0xAD 
+! VTP:                                     0xF2 0x59 0x16 0xBD 0x33 0x47 0x55 0x60 
+! 
+! NAME: "1", DESCR: "WS-C2960S-24PS-L"
+! PID: WS-C2960S-24PS-L  , VID: V03  , SN: FOC1629X0YX
+! 
+! 
+!
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec localtime show-timezone year
+service timestamps log datetime msec localtime show-timezone year
+service password-encryption
+service linenumber
+service sequence-numbers
+!
+hostname SAE-AB1-R2-SWT-01
+!
+boot-start-marker
+boot-end-marker
+!
+!
+username sapramin privilege 15 secret 5 $1$dLom$i4u8IiVNJVIze4Pj6WGxw/
+username oxidized privilege 15 secret 5 $1$fVf8$4BNfDD074PZmlioGcrMIJ0
+no aaa new-model
+clock timezone IRST 3 30
+switch 1 provision ws-c2960s-24ps-l
+!
+!
+no ip domain-lookup
+ip domain-name sapramin.com
+ip name-server 172.31.0.53
+login on-failure log
+login on-success log
+!
+!
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-3357133056
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3357133056
+ revocation-check none
+ rsakeypair TP-self-signed-3357133056
+!
+!
+crypto pki certificate chain TP-self-signed-3357133056
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 33333537 31333330 3536301E 170D3131 30333330 30313238 
+  32365A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 33353731 
+  33333035 3630819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
+  8100CC83 5F302514 F34A4EDF 8447B7AA DDD0E7B7 E662D8CF B708B50D DC44988B 
+  4FDC4AA2 9232BED2 C09E7D46 5FEB2531 9758D1CE 6E669A9B 8148E403 73CE1963 
+  7866139C 930C5FFD E4807851 68439517 858077F4 08D017B2 938C385A 27810C74 
+  9E693837 DF5FE8F6 22DA8BBD 328488C8 49955F94 6EBE0242 067420B4 435C24D4 
+  30BD0203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603 
+  551D2304 18301680 140EC07E FA15F186 5BFE7F32 C12CF282 E2FD2508 B6301D06 
+  03551D0E 04160414 0EC07EFA 15F1865B FE7F32C1 2CF282E2 FD2508B6 300D0609 
+  2A864886 F70D0101 05050003 81810089 67D8C951 D931726D 8844C3B5 4E3D642F 
+  6B92C688 4F99CC18 FAD33B1F D323188E 78A73564 B60897F2 8AB81F03 0E8C2B11 
+  F8DB4206 44D7E845 1AB1F573 DC04E037 B8DE65B0 E5EA46FB 23114E59 A59B3658 
+  6CABD9C6 FCA73835 1D07153D 0476076E 984D9CDA E68A346D 494D7532 9204D79D 
+  169786A4 C9C0A5E5 11FFC45B 608340
+  	quit
+memory free low-watermark processor 20000
+memory free low-watermark IO 20000
+!
+spanning-tree mode rapid-pvst
+spanning-tree portfast bpduguard default
+spanning-tree extend system-id
+errdisable recovery cause channel-misconfig
+port-channel load-balance src-dst-ip
+!
+!
+!
+!
+vlan internal allocation policy ascending
+!
+ip ssh time-out 60
+ip ssh logging events
+ip ssh version 2
+lldp run
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/0/1
+ description SAE-AB1-SERVICE_CENTER_S1-P01-VOIPEX600
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/2
+ description SAE-AB1-SERVICE_CENTER_S1-P02-FREE
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/3
+ description SAE-AB1-SERVICE_CENTER_S2-P01-VOIPEX601
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/4
+ description SAE-AB1-SERVICE_CENTER_S2-P02-0CLIENTSINA
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/5
+ description SAE-AB1-SERVICE_CENTER_S3-P01-0CLIENT
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/6
+ description SAE-AB1-SERVICE_CENTER_S3-P02-VOIPEX602
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/7
+ description SAE-AB1-SERVICE_CENTER_S4-P01-0CLIENTMOTAHHAREH
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/8
+ description SAE-AB1-SERVICE_CENTER-S5-P01-TableCamera-01
+ switchport access vlan 102
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/9
+ description SAE-AB1-KITCHEN-VOIPEX8100
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/10
+ description LED_DESKTOP
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/11
+ description SAE-AB1-MANAGER_ROOM-P01-VOIPEX610
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/12
+ description SAE-AB1-RF-CAM-20
+ switchport access vlan 102
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/13
+ description SAE-AB1-RF-CAM-02
+ switchport access vlan 102
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/14
+ description SAE-AB1-RF-CAM-05
+ switchport access vlan 102
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/15
+ description SAE-AB1-RF-CAM-11
+ switchport access vlan 102
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/16
+ description SAE-AB1-RF-CAM-15
+ switchport access vlan 102
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/17
+ description SAE-AB1-CRM_ROOM_S3-P01-VIOPEX604
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/18
+ description SAE-AB1-CRM_ROOM_S2-P01
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/19
+ description SAE-AB1-CRM_ROOM_S1-P01-FREE
+ switchport voice vlan 103
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/20
+ description SAE-AB1-RF-CAM-16
+ switchport access vlan 102
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/21
+ description SAE-AB1-RF-CAM-17
+ switchport access vlan 102
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/22
+ description SAE-AB1-RF-CAM-19
+ switchport access vlan 102
+ switchport mode access
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/23
+ description DOWNLINK SAE-AB1-RF-WAP-01
+ switchport trunk native vlan 2
+ switchport trunk allowed vlan 1,2,102-108
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/24
+ description UPLINK SAE-AB1-R1-SWT-01 (Gi1/0/42)
+ switchport trunk allowed vlan 1,2,102-108,201
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+!
+interface GigabitEthernet1/0/25
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/26
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/27
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/28
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ shutdown
+ spanning-tree portfast
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan2
+ description MGMT
+ ip address 172.30.8.12 255.255.255.0
+!
+ip default-gateway 172.30.8.1
+ip http server
+ip http secure-server
+!
+!
+ip access-list standard Trusted_SNMP
+ permit 172.16.0.16
+!
+logging source-interface Vlan2
+logging host 172.16.0.20
+logging host 172.16.0.20 transport udp port 1514
+!
+snmp-server community S@Pr4NMP RO Trusted_SNMP
+snmp-server location SAE AB1 [35.731319, 51.411543]
+snmp ifmib ifindex persist
+!
+!
+line con 0
+ login local
+line vty 0 4
+ exec-timeout 50 0
+ login local
+ transport input all
+line vty 5 15
+ exec-timeout 50 0
+ login local
+ transport input all
+!
+ntp server 172.31.0.123
+mac address-table notification change
+mac address-table notification mac-move
+end
+
