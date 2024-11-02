@@ -1,0 +1,183 @@
+#                   version: 7.16.1 (stable)
+#          factory-software: 6.44.6
+#              total-memory: 64.0MiB
+#                       cpu: MIPS 24Kc V7.4
+#                 cpu-count: 1
+#           total-hdd-space: 16.0MiB
+#         architecture-name: mipsbe
+#                board-name: CRS326-24S+2Q+
+#                  platform: MikroTik
+#   installed-version: 7.16.1
+# 
+# software id = 3QSI-M52Y
+#
+# model = CRS326-24S+2Q+
+# serial number = D84E0FA2A6D1
+/interface bridge
+add dhcp-snooping=yes frame-types=admit-only-vlan-tagged name=mainbridge port-cost-mode=short priority=0 pvid=999 vlan-filtering=yes
+/interface ethernet
+set [ find default-name=ether1 ] comment=Management
+set [ find default-name=qsfpplus1-1 ] disabled=yes rx-flow-control=auto tx-flow-control=auto
+set [ find default-name=qsfpplus1-2 ] disabled=yes
+set [ find default-name=qsfpplus1-3 ] disabled=yes
+set [ find default-name=qsfpplus1-4 ] disabled=yes
+set [ find default-name=qsfpplus2-1 ] disabled=yes
+set [ find default-name=qsfpplus2-2 ] disabled=yes
+set [ find default-name=qsfpplus2-3 ] disabled=yes
+set [ find default-name=qsfpplus2-4 ] disabled=yes
+set [ find default-name=sfp-sfpplus1 ] disabled=yes
+set [ find default-name=sfp-sfpplus4 ] comment="DOWNLINK AHD-AF0-R1-SWT-01 (Port 25)"
+set [ find default-name=sfp-sfpplus5 ] comment="DOWNLINK AHD-AF0-R2-SWT-01 (Port 25)"
+set [ find default-name=sfp-sfpplus6 ] comment="DOWNLINK AHD-AF0-R2-SWT-02 (Port 25)"
+set [ find default-name=sfp-sfpplus7 ] comment="DOWNLINK AHD-AF0-R2-SWT-03 (Port 25)"
+set [ find default-name=sfp-sfpplus8 ] comment="DOWNLINK AHD-AF0-R3-SWT-01 (Port 25)"
+set [ find default-name=sfp-sfpplus9 ] comment="DOWNLINK AHD-AF0-R3-SWT-03 (Port 25)"
+set [ find default-name=sfp-sfpplus10 ] comment="DOWNLINK AHD-AF0-R3-SWT-02 (Port 25)"
+set [ find default-name=sfp-sfpplus11 ] comment="DOWNLINK AHD-AF0-R3-SWT-04 (Port 25)"
+set [ find default-name=sfp-sfpplus12 ] comment="DOWNLINK AHD-AF0-R3-SWT-05 (Port 25)"
+set [ find default-name=sfp-sfpplus13 ] comment="PEER LINK"
+set [ find default-name=sfp-sfpplus14 ] comment="PEER LINK"
+set [ find default-name=sfp-sfpplus15 ] comment="DOWNLINK AHD-BF1-R1-SWT-01 (Po1 Gi1/0/51)"
+set [ find default-name=sfp-sfpplus16 ] comment="AHD-AF0-R4-SRV-04 (P1)"
+set [ find default-name=sfp-sfpplus17 ] comment=AHD-AF0-R4-SRV-02
+set [ find default-name=sfp-sfpplus18 ] comment="UPLINK AHD-AF0-R4-RTR-01 (sfp-sfpplus1)"
+set [ find default-name=sfp-sfpplus19 ] comment=AHD-AF0-R4-SWT-03
+set [ find default-name=sfp-sfpplus20 ] comment="AHD-AF0-R4-SRV-02 (P1)"
+set [ find default-name=sfp-sfpplus21 ] disabled=yes
+set [ find default-name=sfp-sfpplus22 ] disabled=yes
+set [ find default-name=sfp-sfpplus23 ] comment="DOWNLINK AHD-AF0-R4-SWT-03 (Po1_Gi1/0/23)"
+set [ find default-name=sfp-sfpplus24 ] comment="AHD-AF0-R4-SRV-01 (P2)"
+/interface vlan
+add interface=mainbridge name=vlan-2-mgmt vlan-id=2
+/interface bonding
+add comment="PEER LINK" lacp-rate=1sec mode=802.3ad name=bonding-mLAG slaves=sfp-sfpplus13,sfp-sfpplus14 transmit-hash-policy=layer-3-and-4 up-delay=1s
+add comment="UPLINK AHD-AF0-R4-RTR-01 (bonding1)" lacp-rate=1sec mlag-id=1 mode=802.3ad name=bonding1 slaves=sfp-sfpplus18 transmit-hash-policy=layer-3-and-4 up-delay=1s
+add comment="DOWNLINK AHD-AF0-R4-SWT-03 (Po1)" mlag-id=2 mode=802.3ad name=bonding2 slaves=sfp-sfpplus23 transmit-hash-policy=layer-3-and-4 up-delay=1s
+add comment="DOWNLINK AHD-BF1-R1-SWT-01 (Po1)" mlag-id=3 mode=802.3ad name=bonding3 slaves=sfp-sfpplus15 transmit-hash-policy=layer-3-and-4 up-delay=1s
+add comment="DOWNLINK AHD-BF1-R1-SWT-01 (Po1)" mlag-id=4 mode=802.3ad name=bonding4 slaves=sfp-sfpplus16 transmit-hash-policy=layer-3-and-4 up-delay=1s
+/interface lte apn
+set [ find default=yes ] ip-type=ipv4 use-network-apn=no
+/ip pool
+add name=dhcp_pool0 ranges=2.2.2.2-2.2.2.254
+add name=dhcp_pool1 ranges=172.17.0.2-172.17.0.253
+add name=dhcp_pool2 ranges=172.17.0.2-172.17.0.253
+add name=dhcp_pool3 ranges=172.18.0.10-172.18.0.254
+add name=dhcp_pool4 ranges=172.18.0.10-172.18.0.254
+add name=dhcp_pool5 ranges=172.19.0.10-172.19.0.254
+add name=dhcp_pool6 ranges=172.20.0.10-172.20.0.254
+add name=dhcp_pool7 ranges=172.16.0.10-172.16.0.253
+add name=dhcp_pool8 ranges=172.19.0.20-172.19.0.254
+/ip smb users
+set [ find default=yes ] disabled=yes
+/port
+set 0 name=serial0
+/snmp community
+set [ find default=yes ] addresses=172.16.0.16/32,172.16.0.24/32 name=S@Pr4NMP
+/system logging action
+set 0 memory-lines=5000
+add name=syslog remote=172.16.0.20 remote-port=1514 src-address=172.30.0.10 target=remote
+/interface bridge mlag
+set bridge=mainbridge peer-port=bonding-mLAG
+/interface bridge port
+add bridge=mainbridge frame-types=admit-only-vlan-tagged interface=sfp-sfpplus1 internal-path-cost=10 path-cost=10 pvid=999
+add bridge=mainbridge frame-types=admit-only-vlan-tagged interface=sfp-sfpplus2 internal-path-cost=10 path-cost=10 pvid=999
+add bridge=mainbridge frame-types=admit-only-vlan-tagged interface=sfp-sfpplus3 internal-path-cost=10 path-cost=10 pvid=999
+add bridge=mainbridge frame-types=admit-only-vlan-tagged interface=sfp-sfpplus4 internal-path-cost=10 path-cost=10 pvid=999
+add bridge=mainbridge frame-types=admit-only-vlan-tagged interface=sfp-sfpplus5 internal-path-cost=10 path-cost=10 pvid=999
+add bridge=mainbridge frame-types=admit-only-vlan-tagged interface=sfp-sfpplus6 internal-path-cost=10 path-cost=10 pvid=999
+add bridge=mainbridge frame-types=admit-only-vlan-tagged interface=sfp-sfpplus7 internal-path-cost=10 path-cost=10 pvid=999
+add bridge=mainbridge frame-types=admit-only-vlan-tagged interface=sfp-sfpplus8 internal-path-cost=10 path-cost=10 pvid=999
+add bridge=mainbridge frame-types=admit-only-vlan-tagged interface=sfp-sfpplus9 internal-path-cost=10 path-cost=10 pvid=999
+add bridge=mainbridge frame-types=admit-only-vlan-tagged interface=sfp-sfpplus10 internal-path-cost=10 path-cost=10 pvid=999
+add bridge=mainbridge frame-types=admit-only-vlan-tagged interface=sfp-sfpplus11 internal-path-cost=10 path-cost=10 pvid=999
+add bridge=mainbridge frame-types=admit-only-vlan-tagged interface=sfp-sfpplus12 internal-path-cost=10 path-cost=10 pvid=999
+add bridge=mainbridge interface=sfp-sfpplus24 internal-path-cost=10 path-cost=10 pvid=101
+add bridge=mainbridge frame-types=admit-only-vlan-tagged interface=sfp-sfpplus19 internal-path-cost=10 path-cost=10 pvid=999
+add bridge=mainbridge interface=sfp-sfpplus17 internal-path-cost=10 path-cost=10 pvid=101
+add bridge=mainbridge frame-types=admit-only-vlan-tagged interface=bonding3 internal-path-cost=10 path-cost=10 pvid=999
+add bridge=mainbridge frame-types=admit-only-vlan-tagged interface=bonding2 internal-path-cost=10 path-cost=10 pvid=999
+add bridge=mainbridge interface=bonding-mLAG internal-path-cost=10 path-cost=10 pvid=666 trusted=yes
+add bridge=mainbridge frame-types=admit-only-vlan-tagged interface=bonding1 internal-path-cost=10 path-cost=10 pvid=999 trusted=yes
+add bridge=mainbridge frame-types=admit-only-vlan-tagged interface=bonding4 internal-path-cost=10 path-cost=10 pvid=999
+/ip firewall connection tracking
+set enabled=no udp-timeout=10s
+/ip neighbor discovery-settings
+set discover-interface-list=!dynamic
+/ip settings
+set max-neighbor-entries=8192
+/ipv6 settings
+set disable-ipv6=yes max-neighbor-entries=8192
+/interface bridge vlan
+add bridge=mainbridge comment="Security Devices" tagged=bonding-mLAG,bonding1,bonding3,sfp-sfpplus7,sfp-sfpplus12 vlan-ids=102
+add bridge=mainbridge comment=LAN tagged="bonding-mLAG,bonding1,bonding3,sfp-sfpplus5,sfp-sfpplus6,sfp-sfpplus7,sfp-sfpplus8,sfp-sfpplus9,sfp-sfpplus10,sfp-sfpplus12,sfp-sfpplus11,sfp-sfpplus24" vlan-ids=104
+add bridge=mainbridge comment=VoIP tagged="bonding-mLAG,bonding1,bonding3,sfp-sfpplus5,sfp-sfpplus6,sfp-sfpplus7,sfp-sfpplus8,sfp-sfpplus9,sfp-sfpplus10,sfp-sfpplus11,sfp-sfpplus12" vlan-ids=103
+add bridge=mainbridge comment=Services tagged=bonding-mLAG,bonding1,bonding4,sfp-sfpplus19 untagged=sfp-sfpplus17,sfp-sfpplus24 vlan-ids=101
+add bridge=mainbridge comment=Management tagged="mainbridge,bonding-mLAG,sfp-sfpplus5,sfp-sfpplus6,sfp-sfpplus7,sfp-sfpplus8,sfp-sfpplus9,sfp-sfpplus10,sfp-sfpplus11,sfp-sfpplus12,bonding1,sfp-sfpplus19,sfp-sfpplus24,bonding3,bonding2" vlan-ids=2
+add bridge=mainbridge comment=ESXi tagged=bonding-mLAG,sfp-sfpplus17,bonding1,sfp-sfpplus19,sfp-sfpplus24 vlan-ids=4
+add bridge=mainbridge comment=iLO tagged=bonding-mLAG,bonding1,bonding2 vlan-ids=3
+add bridge=mainbridge comment=Printer tagged=bonding-mLAG,bonding1,bonding3,sfp-sfpplus8,sfp-sfpplus12,sfp-sfpplus24 vlan-ids=108
+add bridge=mainbridge comment=Guest tagged=bonding-mLAG,bonding1,bonding3,sfp-sfpplus8,sfp-sfpplus12 vlan-ids=107
+add bridge=mainbridge comment=WLAN tagged=bonding-mLAG,bonding1,bonding3,sfp-sfpplus8,sfp-sfpplus12,sfp-sfpplus24 vlan-ids=105
+add bridge=mainbridge comment=IoT tagged="bonding-mLAG,bonding1,sfp-sfpplus4,sfp-sfpplus7,sfp-sfpplus8,sfp-sfpplus12" vlan-ids=106
+add bridge=mainbridge comment=vMotion tagged=bonding-mLAG,bonding1,bonding2 vlan-ids=110
+/interface ovpn-server server
+set auth=sha1,md5
+/ip address
+add address=192.168.97.1/24 disabled=yes interface=sfp-sfpplus15 network=192.168.97.0
+add address=172.30.0.10/24 interface=vlan-2-mgmt network=172.30.0.0
+/ip dhcp-server
+add address-pool=dhcp_pool2 disabled=yes interface=mainbridge lease-time=71w3d10m name=dhcp1
+add address-pool=dhcp_pool4 disabled=yes interface=*25 lease-time=42w6d10m name=dhcp2
+add address-pool=dhcp_pool6 disabled=yes interface=*28 lease-time=11w3d10m name=dhcp4
+add address-pool=dhcp_pool7 disabled=yes interface=*2C lease-time=7w1d10m name=dhcp5
+add address-pool=dhcp_pool8 disabled=yes interface=*33 lease-time=4w2d10m name=dhcp3
+/ip dhcp-server network
+add address=172.16.0.0/24 dns-server=8.8.8.8,4.2.2.4 gateway=172.16.0.2
+add address=172.17.0.0/24 dns-server=8.8.8.8,4.2.2.4 gateway=172.17.0.1
+add address=172.18.0.0/24 dns-server=8.8.8.8,4.2.2.4 gateway=172.18.0.1
+add address=172.19.0.0/24 dns-server=8.8.8.8,4.2.2.4 gateway=172.19.0.1
+add address=172.20.0.0/24 dns-server=8.8.8.8,4.2.2.4 gateway=172.20.0.1
+/ip dns
+set allow-remote-requests=yes servers=8.8.8.8,4.2.2.4
+/ip dns static
+add address=172.16.0.15 disabled=yes name=automation.sapramin.com type=A
+/ip firewall service-port
+set ftp disabled=yes
+set tftp disabled=yes
+set h323 disabled=yes
+/ip ipsec profile
+set [ find default=yes ] dpd-interval=2m dpd-maximum-failures=5
+/ip route
+add disabled=no distance=1 dst-address=0.0.0.0/0 gateway=172.30.0.1 pref-src="" routing-table=main scope=30 suppress-hw-offload=no target-scope=10
+/ip service
+set telnet address=172.16.0.16/32
+set ftp disabled=yes
+set www disabled=yes
+set ssh address=172.16.0.16/32
+set api disabled=yes
+set winbox port=8595
+set api-ssl disabled=yes
+/ip smb shares
+set [ find default=yes ] directory=/flash/pub
+/ip ssh
+set strong-crypto=yes
+/routing bfd configuration
+add disabled=no
+/snmp
+set contact=it@sapramin.com enabled=yes location="AHD AF0 [35.647593, 51.203148]" src-address=172.30.0.10
+/system clock
+set time-zone-name=Asia/Tehran
+/system identity
+set name=AHD-AF0-R4-SWT-01
+/system logging
+add disabled=yes topics=ospf,debug
+add action=syslog topics=critical
+add action=syslog topics=error
+add action=syslog topics=info
+add action=syslog topics=warning
+/system note
+set show-at-login=no
+/system ntp client
+set enabled=yes
+/system ntp client servers
+add address=172.31.0.123
