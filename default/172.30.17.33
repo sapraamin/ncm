@@ -11,106 +11,106 @@
 # Flags: U - UNDOABLE
 # Columns: ACTION, BY, POLICY, TIME
 #   ACTION            BY     POLICY  TIME               
-# U nat rule changed  admin  write   2024-11-02 15:24:17
-# U nat rule changed  admin  write   2024-11-02 15:23:17
-# U nat rule changed  admin  write   2024-11-02 15:22:17
-# U nat rule changed  admin  write   2024-11-02 15:21:17
-# U nat rule changed  admin  write   2024-11-02 15:20:17
-# U nat rule changed  admin  write   2024-11-02 15:19:17
-# U nat rule changed  admin  write   2024-11-02 15:18:17
-# U nat rule changed  admin  write   2024-11-02 15:17:17
-# U nat rule changed  admin  write   2024-11-02 15:16:17
-# U nat rule changed  admin  write   2024-11-02 15:15:17
-# U nat rule changed  admin  write   2024-11-02 15:14:17
-# U nat rule changed  admin  write   2024-11-02 15:13:17
-# U nat rule changed  admin  write   2024-11-02 15:12:17
-# U nat rule changed  admin  write   2024-11-02 15:11:17
-# U nat rule changed  admin  write   2024-11-02 15:10:17
-# U nat rule changed  admin  write   2024-11-02 15:09:17
-# U nat rule changed  admin  write   2024-11-02 15:08:17
-# U nat rule changed  admin  write   2024-11-02 15:07:17
-# U nat rule changed  admin  write   2024-11-02 15:06:17
-# U nat rule changed  admin  write   2024-11-02 15:05:17
-# U nat rule changed  admin  write   2024-11-02 15:04:17
-# U nat rule changed  admin  write   2024-11-02 15:03:17
-# U nat rule changed  admin  write   2024-11-02 15:02:17
-# U nat rule changed  admin  write   2024-11-02 15:01:17
-# U nat rule changed  admin  write   2024-11-02 15:00:17
-# U nat rule changed  admin  write   2024-11-02 14:59:17
-# U nat rule changed  admin  write   2024-11-02 14:58:17
-# U nat rule changed  admin  write   2024-11-02 14:57:17
-# U nat rule changed  admin  write   2024-11-02 14:56:17
-# U nat rule changed  admin  write   2024-11-02 14:55:17
-# U nat rule changed  admin  write   2024-11-02 14:54:17
-# U nat rule changed  admin  write   2024-11-02 14:53:17
-# U nat rule changed  admin  write   2024-11-02 14:52:17
-# U nat rule changed  admin  write   2024-11-02 14:51:17
-# U nat rule changed  admin  write   2024-11-02 14:50:17
-# U nat rule changed  admin  write   2024-11-02 14:49:17
-# U nat rule changed  admin  write   2024-11-02 14:48:17
-# U nat rule changed  admin  write   2024-11-02 14:47:17
-# U nat rule changed  admin  write   2024-11-02 14:46:17
-# U nat rule changed  admin  write   2024-11-02 14:45:17
-# U nat rule changed  admin  write   2024-11-02 14:44:17
-# U nat rule changed  admin  write   2024-11-02 14:43:17
-# U nat rule changed  admin  write   2024-11-02 14:42:17
-# U nat rule changed  admin  write   2024-11-02 14:41:17
-# U nat rule changed  admin  write   2024-11-02 14:40:17
-# U nat rule changed  admin  write   2024-11-02 14:39:17
-# U nat rule changed  admin  write   2024-11-02 14:38:17
-# U nat rule changed  admin  write   2024-11-02 14:37:17
-# U nat rule changed  admin  write   2024-11-02 14:36:17
-# U nat rule changed  admin  write   2024-11-02 14:35:17
-# U nat rule changed  admin  write   2024-11-02 14:34:17
-# U nat rule changed  admin  write   2024-11-02 14:33:17
-# U nat rule changed  admin  write   2024-11-02 14:32:17
-# U nat rule changed  admin  write   2024-11-02 14:31:17
-# U nat rule changed  admin  write   2024-11-02 14:30:17
-# U nat rule changed  admin  write   2024-11-02 14:29:17
-# U nat rule changed  admin  write   2024-11-02 14:28:17
-# U nat rule changed  admin  write   2024-11-02 14:27:17
-# U nat rule changed  admin  write   2024-11-02 14:26:17
-# U nat rule changed  admin  write   2024-11-02 14:25:17
-# U nat rule changed  admin  write   2024-11-02 14:24:17
-# U nat rule changed  admin  write   2024-11-02 14:23:17
-# U nat rule changed  admin  write   2024-11-02 14:22:17
-# U nat rule changed  admin  write   2024-11-02 14:21:17
-# U nat rule changed  admin  write   2024-11-02 14:20:17
-# U nat rule changed  admin  write   2024-11-02 14:19:17
-# U nat rule changed  admin  write   2024-11-02 14:18:17
-# U nat rule changed  admin  write   2024-11-02 14:17:17
-# U nat rule changed  admin  write   2024-11-02 14:16:17
-# U nat rule changed  admin  write   2024-11-02 14:15:17
-# U nat rule changed  admin  write   2024-11-02 14:14:17
-# U nat rule changed  admin  write   2024-11-02 14:13:17
-# U nat rule changed  admin  write   2024-11-02 14:12:17
-# U nat rule changed  admin  write   2024-11-02 14:11:17
-# U nat rule changed  admin  write   2024-11-02 14:10:17
-# U nat rule changed  admin  write   2024-11-02 14:09:17
-# U nat rule changed  admin  write   2024-11-02 14:08:17
-# U nat rule changed  admin  write   2024-11-02 14:07:17
-# U nat rule changed  admin  write   2024-11-02 14:06:17
-# U nat rule changed  admin  write   2024-11-02 14:05:17
-# U nat rule changed  admin  write   2024-11-02 14:04:17
-# U nat rule changed  admin  write   2024-11-02 14:03:17
-# U nat rule changed  admin  write   2024-11-02 14:02:17
-# U nat rule changed  admin  write   2024-11-02 14:01:17
-# U nat rule changed  admin  write   2024-11-02 14:00:17
-# U nat rule changed  admin  write   2024-11-02 13:59:17
-# U nat rule changed  admin  write   2024-11-02 13:58:17
-# U nat rule changed  admin  write   2024-11-02 13:57:17
-# U nat rule changed  admin  write   2024-11-02 13:56:17
-# U nat rule changed  admin  write   2024-11-02 13:55:17
-# U nat rule changed  admin  write   2024-11-02 13:54:17
-# U nat rule changed  admin  write   2024-11-02 13:53:17
-# U nat rule changed  admin  write   2024-11-02 13:52:17
-# U nat rule changed  admin  write   2024-11-02 13:51:17
-# U nat rule changed  admin  write   2024-11-02 13:50:17
-# U nat rule changed  admin  write   2024-11-02 13:49:17
-# U nat rule changed  admin  write   2024-11-02 13:48:17
-# U nat rule changed  admin  write   2024-11-02 13:47:17
-# U nat rule changed  admin  write   2024-11-02 13:46:17
-# U nat rule changed  admin  write   2024-11-02 13:45:17
+# U nat rule changed  admin  write   2024-11-03 15:16:27
+# U dns changed       admin  write   2024-11-03 15:16:27
+# U nat rule changed  admin  write   2024-11-03 15:16:17
+# U dns changed       admin  write   2024-11-03 15:15:17
+# U nat rule changed  admin  write   2024-11-03 15:13:27
+# U dns changed       admin  write   2024-11-03 15:13:27
+# U nat rule changed  admin  write   2024-11-03 15:13:17
+# U dns changed       admin  write   2024-11-03 15:12:17
+# U nat rule changed  admin  write   2024-11-03 15:10:27
+# U dns changed       admin  write   2024-11-03 15:10:27
+# U nat rule changed  admin  write   2024-11-03 15:10:17
+# U dns changed       admin  write   2024-11-03 15:09:18
+# U nat rule changed  admin  write   2024-11-03 15:08:27
+# U dns changed       admin  write   2024-11-03 15:08:27
+# U nat rule changed  admin  write   2024-11-03 15:08:17
+# U dns changed       admin  write   2024-11-03 15:07:25
+# U nat rule changed  admin  write   2024-11-03 14:56:27
+# U dns changed       admin  write   2024-11-03 14:56:27
+# U nat rule changed  admin  write   2024-11-03 14:56:17
+# U dns changed       admin  write   2024-11-03 14:55:27
+# U nat rule changed  admin  write   2024-11-03 14:53:27
+# U dns changed       admin  write   2024-11-03 14:53:27
+# U nat rule changed  admin  write   2024-11-03 14:53:17
+# U nat rule changed  admin  write   2024-11-03 14:52:17
+# U nat rule changed  admin  write   2024-11-03 14:51:17
+# U nat rule changed  admin  write   2024-11-03 14:50:17
+# U nat rule changed  admin  write   2024-11-03 14:49:17
+# U nat rule changed  admin  write   2024-11-03 14:48:17
+# U dns changed       admin  write   2024-11-03 14:47:18
+# U nat rule changed  admin  write   2024-11-03 14:46:27
+# U dns changed       admin  write   2024-11-03 14:46:27
+# U nat rule changed  admin  write   2024-11-03 14:46:17
+# U nat rule changed  admin  write   2024-11-03 14:45:17
+# U dns changed       admin  write   2024-11-03 14:44:17
+# U nat rule changed  admin  write   2024-11-03 14:43:27
+# U dns changed       admin  write   2024-11-03 14:43:27
+# U nat rule changed  admin  write   2024-11-03 14:43:17
+# U dns changed       admin  write   2024-11-03 14:42:19
+# U nat rule changed  admin  write   2024-11-03 14:39:27
+# U dns changed       admin  write   2024-11-03 14:39:27
+# U nat rule changed  admin  write   2024-11-03 14:39:17
+# U nat rule changed  admin  write   2024-11-03 14:38:17
+# U nat rule changed  admin  write   2024-11-03 14:37:17
+# U dns changed       admin  write   2024-11-03 14:36:17
+# U nat rule changed  admin  write   2024-11-03 14:35:27
+# U dns changed       admin  write   2024-11-03 14:35:27
+# U nat rule changed  admin  write   2024-11-03 14:35:17
+# U nat rule changed  admin  write   2024-11-03 14:34:17
+# U nat rule changed  admin  write   2024-11-03 14:33:17
+# U dns changed       admin  write   2024-11-03 14:32:27
+# U nat rule changed  admin  write   2024-11-03 14:30:27
+# U dns changed       admin  write   2024-11-03 14:30:27
+# U nat rule changed  admin  write   2024-11-03 14:30:17
+# U nat rule changed  admin  write   2024-11-03 14:29:17
+# U nat rule changed  admin  write   2024-11-03 14:28:17
+# U nat rule changed  admin  write   2024-11-03 14:27:17
+# U nat rule changed  admin  write   2024-11-03 14:26:17
+# U nat rule changed  admin  write   2024-11-03 14:25:17
+# U nat rule changed  admin  write   2024-11-03 14:24:17
+# U nat rule changed  admin  write   2024-11-03 14:23:17
+# U nat rule changed  admin  write   2024-11-03 14:22:17
+# U nat rule changed  admin  write   2024-11-03 14:21:17
+# U nat rule changed  admin  write   2024-11-03 14:20:17
+# U nat rule changed  admin  write   2024-11-03 14:19:17
+# U nat rule changed  admin  write   2024-11-03 14:18:17
+# U nat rule changed  admin  write   2024-11-03 14:17:17
+# U nat rule changed  admin  write   2024-11-03 14:16:17
+# U nat rule changed  admin  write   2024-11-03 14:15:17
+# U nat rule changed  admin  write   2024-11-03 14:14:17
+# U nat rule changed  admin  write   2024-11-03 14:13:17
+# U nat rule changed  admin  write   2024-11-03 14:12:17
+# U nat rule changed  admin  write   2024-11-03 14:11:17
+# U nat rule changed  admin  write   2024-11-03 14:10:17
+# U nat rule changed  admin  write   2024-11-03 14:09:17
+# U nat rule changed  admin  write   2024-11-03 14:08:17
+# U nat rule changed  admin  write   2024-11-03 14:07:17
+# U nat rule changed  admin  write   2024-11-03 14:06:17
+# U nat rule changed  admin  write   2024-11-03 14:05:17
+# U nat rule changed  admin  write   2024-11-03 14:04:17
+# U nat rule changed  admin  write   2024-11-03 14:03:17
+# U nat rule changed  admin  write   2024-11-03 14:02:17
+# U nat rule changed  admin  write   2024-11-03 14:01:17
+# U nat rule changed  admin  write   2024-11-03 14:00:17
+# U nat rule changed  admin  write   2024-11-03 13:59:17
+# U nat rule changed  admin  write   2024-11-03 13:58:17
+# U nat rule changed  admin  write   2024-11-03 13:57:17
+# U nat rule changed  admin  write   2024-11-03 13:56:17
+# U nat rule changed  admin  write   2024-11-03 13:55:17
+# U nat rule changed  admin  write   2024-11-03 13:54:17
+# U nat rule changed  admin  write   2024-11-03 13:53:17
+# U nat rule changed  admin  write   2024-11-03 13:52:17
+# U nat rule changed  admin  write   2024-11-03 13:51:17
+# U nat rule changed  admin  write   2024-11-03 13:50:17
+# U nat rule changed  admin  write   2024-11-03 13:49:17
+# U nat rule changed  admin  write   2024-11-03 13:48:17
+# U nat rule changed  admin  write   2024-11-03 13:47:17
+# U nat rule changed  admin  write   2024-11-03 13:46:17
+# U nat rule changed  admin  write   2024-11-03 13:45:17
+# U nat rule changed  admin  write   2024-11-03 13:44:17
+# U nat rule changed  admin  write   2024-11-03 13:43:17
 # 
 # software id = 9J2Q-X1IN
 #
@@ -241,7 +241,7 @@ add address=172.16.116.0/25 comment=IoT dns-server=172.16.0.11 gateway=172.16.11
 add address=172.16.116.128/26 comment=Guest dns-server=172.16.0.11 gateway=172.16.116.129 ntp-server=172.31.0.123
 add address=172.16.116.192/26 comment=Printer dns-server=172.16.0.11 gateway=172.16.116.193 ntp-server=172.31.0.123
 /ip dns
-set allow-remote-requests=yes servers=172.16.0.11
+set allow-remote-requests=yes servers=8.8.8.8,1.1.1.1,9.9.9.9
 /ip firewall address-list
 add address=192.168.0.0/16 comment=RFC6890 list=bogon
 add address=172.16.0.0/12 comment=RFC6890 list=bogon
@@ -269,7 +269,7 @@ add action=drop chain=forward comment="Drop invalid connections from WAN" connec
 /ip firewall mangle
 add action=mark-packet chain=prerouting content=registration dst-port=53 new-packet-mark=dns-register protocol=udp
 /ip firewall nat
-add action=redirect chain=dstnat comment="DNS Capture" disabled=yes dst-port=53 in-interface-list=DNS_capture protocol=udp
+add action=redirect chain=dstnat comment="DNS Capture" dst-port=53 in-interface-list=DNS_capture protocol=udp
 add action=src-nat chain=srcnat comment="WAN NAT" out-interface=ether1 to-addresses=178.131.91.173
 /ip firewall raw
 add action=drop chain=prerouting comment="Drop DNS from WAN" dst-port=53 in-interface=ether1 protocol=udp
