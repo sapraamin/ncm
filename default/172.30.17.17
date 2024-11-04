@@ -11,6 +11,16 @@
 # Flags: U - UNDOABLE
 # Columns: ACTION, BY, POLICY, TIME
 #   ACTION            BY     POLICY  TIME               
+# U nat rule changed  admin  write   2024-11-03 15:51:13
+# U nat rule changed  admin  write   2024-11-03 15:50:13
+# U nat rule changed  admin  write   2024-11-03 15:49:13
+# U nat rule changed  admin  write   2024-11-03 15:48:13
+# U nat rule changed  admin  write   2024-11-03 15:47:13
+# U nat rule changed  admin  write   2024-11-03 15:46:13
+# U nat rule changed  admin  write   2024-11-03 15:45:13
+# U nat rule changed  admin  write   2024-11-03 15:44:13
+# U nat rule changed  admin  write   2024-11-03 15:43:13
+# U nat rule changed  admin  write   2024-11-03 15:42:13
 # U nat rule changed  admin  write   2024-11-03 15:41:13
 # U nat rule changed  admin  write   2024-11-03 15:40:13
 # U nat rule changed  admin  write   2024-11-03 15:39:13
@@ -101,16 +111,6 @@
 # U nat rule changed  admin  write   2024-11-03 14:14:13
 # U nat rule changed  admin  write   2024-11-03 14:13:13
 # U nat rule changed  admin  write   2024-11-03 14:12:13
-# U nat rule changed  admin  write   2024-11-03 14:11:13
-# U nat rule changed  admin  write   2024-11-03 14:10:13
-# U nat rule changed  admin  write   2024-11-03 14:09:13
-# U nat rule changed  admin  write   2024-11-03 14:08:13
-# U nat rule changed  admin  write   2024-11-03 14:07:13
-# U nat rule changed  admin  write   2024-11-03 14:06:13
-# U nat rule changed  admin  write   2024-11-03 14:05:13
-# U nat rule changed  admin  write   2024-11-03 14:04:13
-# U nat rule changed  admin  write   2024-11-03 14:03:13
-# U nat rule changed  admin  write   2024-11-03 14:02:13
 # 
 # software id = AGAJ-NBU1
 #
