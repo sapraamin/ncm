@@ -64,8 +64,6 @@ set strong-crypto=yes
 add disabled=no
 /snmp
 set contact=it@sapramin.com enabled=yes location="AHD ART [35.647593, 51.203148]" src-address=172.30.0.24
-/system clock
-set time-zone-name=Asia/Tehran
 /system identity
 set name=AHD-CRT-RF-WAP-01
 /system logging
